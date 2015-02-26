@@ -7,7 +7,7 @@ html, body {
   margin: 0;
   padding: 0;
   color: white;
-  background: #333;
+  background: #0ac2d2;
   overflow: hidden; }
 
 .container-fluid {
@@ -41,3 +41,44 @@ html, body {
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px; }
+.plus{
+    background-color: transparent;
+    border: none;
+    margin-top: 10px;
+}
+.navbar-header a{
+    vertical-align: middle;
+}
+.margin_icon_top{
+    margin: 5px 0px 0px 15px;
+}
+.gly_appear{
+    padding: 0px;
+    display: block;
+    float: left;
+    margin-bottom: 15px;
+}
+.gly_appear button{
+    background-color: #fff;
+    font-size: 30px;
+    margin: 1px;
+}
+.icon_text{
+    font-size: 11px;
+}
+.gly_md .correct_font {
+    font-family: 'Helvetica';
+}
+.gly_md >button{
+    font-size:16px;
+    background-color: #fff;
+    padding: 6px 15px 6px 15px;
+    border: 1px solid #000;
+}
+.show_all{
+    margin-right: 0px;
+}
+.p-attached{
+    height: 100%;
+    width: 100%;
+}
