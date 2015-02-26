@@ -1,0 +1,43 @@
+/**
+ * Application & Navbar
+ */
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  color: white;
+  background: #333;
+  overflow: hidden; }
+
+.container-fluid {
+  margin-top: 70px; }
+
+.navbar > .container > .navbar-header, .navbar > .container-fluid > .navbar-header {
+  width: 100%; }
+
+/*
+.container-fluid {
+    margin-top: 70px;
+}
+.navbar > .container-fluid > .navbar-header > .navbar-nav-center {
+    position: absolute;
+    left: 40%;
+    display: block;
+    width: 20%;
+    text-align: center;
+
+    float: left;
+    margin: 0;
+}*/
+.row-no-padding > [class*="col-"] {
+  padding-left: 0 !important;
+  padding-right: 0 !important; }
+
+.col-xs-0 {
+  width: 0%;
+  float: left;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px; }

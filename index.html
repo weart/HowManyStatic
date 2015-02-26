@@ -1,0 +1,441 @@
+<!doctype html>
+<html class="no-js" lang="">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>HowMany</title>
+		<meta name="description" content="HowMany">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+		<!-- Libs / Vendors -->
+		<link rel="stylesheet" href="css/normalize.css">
+		<!--<link rel="stylesheet" href="css/main.css">-->
+
+		<!-- Bootstrap 3 -->
+		<link rel="stylesheet" href="css/bootstrap-css-3.3.2/css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/bootstrap-css-3.3.2/css/bootstrap-theme.min.css">
+
+		<!-- Font Awesome
+			http://fortawesome.github.io/Font-Awesome/icons/
+			http://fortawesome.github.io/Font-Awesome/examples/ -->
+		<!--<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">-->
+		<link rel="stylesheet" href="css/font-awesome-4.2.0/css/font-awesome.min.css">
+
+
+		<!-- Created CSS: Aqui van els teus CSS Dan, un x pagina... -->
+		<link rel="stylesheet" href="css/app.css">
+		<link rel="stylesheet" href="css/pages.css">
+		<link rel="stylesheet" href="css/toolbar.css">
+		<link rel="stylesheet" href="css/vcomponent-item.css">
+		<link rel="stylesheet" href="css/calendars.css">
+
+	</head>
+	<body>
+		<!--[if lt IE 8]>
+			<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+		<![endif]-->
+
+
+
+
+
+
+		<!--
+			Navbar (app.css)
+		-->
+		<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+			<div class="container"><!-- .container-fluid -->
+				<div class="navbar-header">
+					<a class="navbar-brand" href="/">HowMany</a>
+					<div class="navbar-nav">
+						<a class="btn btn-default btn-sm navbar-btn" href="/new">New</a>
+					</div>
+					<div class="navbar-nav pull-right">
+						<a class="navbar-text" href="/configuration">Configuration</a>
+						<a class="navbar-text" href="/credits">Credits</a>
+					</div>
+				</div>
+			</div>
+		</nav>
+
+
+
+
+
+
+		<!--
+			Pages container (app.css & pages.css)
+		-->
+		<div id="viewport" class="row pt-perspective">
+
+
+
+
+
+
+			<!--
+				Challenger (toolbar.css & vcomponent-item.css)
+				http://css-tricks.com/snippets/css/ribbon/
+				http://demos.jquerymobile.com/1.4.0/listview-grid/listview-grid.html
+				http://codepen.io/Topcoat/pen/kdKyg
+				http://www.cssflow.com/snippets/top-bar/demo
+			-->
+			<section id="page-challenger" class="page col-xs-12">
+				<!--{{!--
+					http://microformats.org/wiki/h-event
+					[p/dt/u]-{property}
+				--}}-->
+				<div id="page-challenger-tags-filter" class="button-group">
+					<button class="button is-checked" data-filter="*">show all</button>
+					<button class="button" data-filter="filterTag" data-filter-tag="A">A</button>
+					<button class="button" data-filter="filterTag" data-filter-tag="B">B</button>
+					<button class="button" data-filter="filterTag" data-filter-tag="C">C</button>
+					<button class="button" data-filter="filterTag" data-filter-tag="D">D</button>
+					<button class="button" data-filter=".vcomponent-item-high-priority">Priority High</button>
+					<button class="button" data-filter=".vcomponent-item-medium-priority">Priority Medium</button>
+					<button class="button" data-filter=".vcomponent-item-low-priority">Priority Low</button>
+				</div>
+
+				<center id="page-challenger-masonry-container">
+
+					<div class="pull-left vcomponent-item">
+						<div class="h-event">
+
+							<img class="p-attached" src="./img/Gimnas.png" />
+							<!--{{!--<div class="aside pull-right">10-10-2014</div>--}}-->
+
+							<div class="ribbon">
+								<!--<i class="fa fa-calendar-o fa-2x pull-left"></i>-->
+								<!--<i class="fa fa-2x fa-group pull-left"></i>-->
+								<h2 class="p-summary text-center">summary</h2>
+							</div>
+
+							<div class="extended text-left">
+								<p>From
+									<time class="dt-start" datetime="2013-06-30 12:00">30<sup>th</sup> June 2013, 12:00</time>
+									to <time class="dt-end" datetime="2013-06-30 18:00">18:00</time>
+									at <span class="p-location">location</span>
+								</p>
+								<p>Not done since... lastDoneStr</p>
+								<p class="p-description">vcomponent.description</p>
+								<p class="p-category" data-tags="A;B;C">A, B, C</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="pull-left vcomponent-item vcomponent-item-low-priority">
+						<div class="h-event">
+
+							<img class="p-attached" src="./img/Gimnas.png" />
+							<!--{{!--<div class="aside pull-right">10-10-2014</div>--}}-->
+
+							<div class="ribbon">
+								<!--<i class="fa fa-calendar-o fa-2x pull-left"></i>-->
+								<!--<i class="fa fa-2x fa-group pull-left"></i>-->
+								<h2 class="p-summary text-center">summary</h2>
+							</div>
+
+							<div class="extended text-left">
+								<p>From
+									<time class="dt-start" datetime="2013-06-30 12:00">30<sup>th</sup> June 2013, 12:00</time>
+									to <time class="dt-end" datetime="2013-06-30 18:00">18:00</time>
+									at <span class="p-location">location</span>
+								</p>
+								<p>Not done since... lastDoneStr</p>
+								<p class="p-description">vcomponent.description</p>
+								<p class="p-category" data-tags="A;B">A, B</p>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="pull-left vcomponent-item vcomponent-item-medium-priority">
+						<div class="h-event">
+
+							<img class="p-attached" src="./img/Gimnas.png" />
+							<!--{{!--<div class="aside pull-right">10-10-2014</div>--}}-->
+
+							<div class="ribbon">
+								<!--<i class="fa fa-calendar-o fa-2x pull-left"></i>-->
+								<!--<i class="fa fa-2x fa-group pull-left"></i>-->
+								<h2 class="p-summary text-center">summary</h2>
+							</div>
+
+							<div class="extended text-left">
+								<p>From
+									<time class="dt-start" datetime="2013-06-30 12:00">30<sup>th</sup> June 2013, 12:00</time>
+									to <time class="dt-end" datetime="2013-06-30 18:00">18:00</time>
+									at <span class="p-location">location</span>
+								</p>
+								<p>Not done since... lastDoneStr</p>
+								<p class="p-description">vcomponent.description</p>
+								<p class="p-category" data-tags="D">D</p>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="pull-left vcomponent-item vcomponent-item-high-priority">
+						<div class="h-event">
+
+							<img class="p-attached" src="./img/Gimnas.png" />
+							<!--{{!--<div class="aside pull-right">10-10-2014</div>--}}-->
+
+							<div class="ribbon">
+								<!--<i class="fa fa-calendar-o fa-2x pull-left"></i>-->
+								<!--<i class="fa fa-2x fa-group pull-left"></i>-->
+								<h2 class="p-summary text-center">summary</h2>
+							</div>
+
+							<div class="extended text-left">
+								<p>From
+									<time class="dt-start" datetime="2013-06-30 12:00">30<sup>th</sup> June 2013, 12:00</time>
+									to <time class="dt-end" datetime="2013-06-30 18:00">18:00</time>
+									at <span class="p-location">location</span>
+								</p>
+								<p>Not done since... lastDoneStr</p>
+								<p class="p-description">vcomponent.description</p>
+								<p class="p-category" data-tags="A;C">A, C</p>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="pull-left vcomponent-item vcomponent-item-low-priority">
+						<div class="h-event">
+
+							<img class="p-attached" src="./img/Gimnas.png" />
+							<!--{{!--<div class="aside pull-right">10-10-2014</div>--}}-->
+
+							<div class="ribbon">
+								<!--<i class="fa fa-calendar-o fa-2x pull-left"></i>-->
+								<!--<i class="fa fa-2x fa-group pull-left"></i>-->
+								<h2 class="p-summary text-center">summary</h2>
+							</div>
+
+							<div class="extended text-left">
+								<p>From
+									<time class="dt-start" datetime="2013-06-30 12:00">30<sup>th</sup> June 2013, 12:00</time>
+									to <time class="dt-end" datetime="2013-06-30 18:00">18:00</time>
+									at <span class="p-location">location</span>
+								</p>
+								<p>Not done since... lastDoneStr</p>
+								<p class="p-description">vcomponent.description</p>
+								<p class="p-category" data-tags="A;D">A, D</p>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="pull-left vcomponent-item vcomponent-item-low-priority">
+						<div class="h-event">
+
+							<img class="p-attached" src="./img/Gimnas.png" />
+							<!--{{!--<div class="aside pull-right">10-10-2014</div>--}}-->
+
+							<div class="ribbon">
+								<!--<i class="fa fa-calendar-o fa-2x pull-left"></i>-->
+								<!--<i class="fa fa-2x fa-group pull-left"></i>-->
+								<h2 class="p-summary text-center">summary</h2>
+							</div>
+
+							<div class="extended text-left">
+								<p>From
+									<time class="dt-start" datetime="2013-06-30 12:00">30<sup>th</sup> June 2013, 12:00</time>
+									to <time class="dt-end" datetime="2013-06-30 18:00">18:00</time>
+									at <span class="p-location">location</span>
+								</p>
+								<p>Not done since... lastDoneStr</p>
+								<p class="p-description">vcomponent.description</p>
+								<p class="p-category" data-tags="A;B;C">A, B, C</p>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="pull-left vcomponent-item vcomponent-item-medium-priority">
+						<div class="h-event">
+
+							<img class="p-attached" src="./img/Gimnas.png" />
+							<!--{{!--<div class="aside pull-right">10-10-2014</div>--}}-->
+
+							<div class="ribbon">
+								<!--<i class="fa fa-calendar-o fa-2x pull-left"></i>-->
+								<!--<i class="fa fa-2x fa-group pull-left"></i>-->
+								<h2 class="p-summary text-center">summary</h2>
+							</div>
+
+							<div class="extended text-left">
+								<p>From
+									<time class="dt-start" datetime="2013-06-30 12:00">30<sup>th</sup> June 2013, 12:00</time>
+									to <time class="dt-end" datetime="2013-06-30 18:00">18:00</time>
+									at <span class="p-location">location</span>
+								</p>
+								<p>Not done since... lastDoneStr</p>
+								<p class="p-description">vcomponent.description</p>
+								<p class="p-category" data-tags="B;C">B, C</p>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="pull-left vcomponent-item vcomponent-item-high-priority">
+						<div class="h-event">
+
+							<img class="p-attached" src="./img/Gimnas.png" />
+							<!--{{!--<div class="aside pull-right">10-10-2014</div>--}}-->
+
+							<div class="ribbon">
+								<!--<i class="fa fa-calendar-o fa-2x pull-left"></i>-->
+								<!--<i class="fa fa-2x fa-group pull-left"></i>-->
+								<h2 class="p-summary text-center">summary</h2>
+							</div>
+
+							<div class="extended text-left">
+								<p>From
+									<time class="dt-start" datetime="2013-06-30 12:00">30<sup>th</sup> June 2013, 12:00</time>
+									to <time class="dt-end" datetime="2013-06-30 18:00">18:00</time>
+									at <span class="p-location">location</span>
+								</p>
+								<p>Not done since... lastDoneStr</p>
+								<p class="p-description">vcomponent.description</p>
+								<p class="p-category" data-tags="A">A</p>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="pull-left vcomponent-item vcomponent-item-high-priority">
+						<div class="h-event">
+
+							<img class="p-attached" src="./img/Gimnas.png" />
+							<!--{{!--<div class="aside pull-right">10-10-2014</div>--}}-->
+
+							<div class="ribbon">
+								<!--<i class="fa fa-calendar-o fa-2x pull-left"></i>-->
+								<!--<i class="fa fa-2x fa-group pull-left"></i>-->
+								<h2 class="p-summary text-center">summary</h2>
+							</div>
+
+							<div class="extended text-left">
+								<p>From
+									<time class="dt-start" datetime="2013-06-30 12:00">30<sup>th</sup> June 2013, 12:00</time>
+									to <time class="dt-end" datetime="2013-06-30 18:00">18:00</time>
+									at <span class="p-location">location</span>
+								</p>
+								<p>Not done since... lastDoneStr</p>
+								<p class="p-description">vcomponent.description</p>
+								<p class="p-category" data-tags="B;C">B, C</p>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="pull-left vcomponent-item vcomponent-item-medium-priority">
+						<div class="h-event">
+
+							<img class="p-attached" src="./img/Gimnas.png" />
+							<!--{{!--<div class="aside pull-right">10-10-2014</div>--}}-->
+
+							<div class="ribbon">
+								<!--<i class="fa fa-calendar-o fa-2x pull-left"></i>-->
+								<!--<i class="fa fa-2x fa-group pull-left"></i>-->
+								<h2 class="p-summary text-center">summary</h2>
+							</div>
+
+							<div class="extended text-left">
+								<p>From
+									<time class="dt-start" datetime="2013-06-30 12:00">30<sup>th</sup> June 2013, 12:00</time>
+									to <time class="dt-end" datetime="2013-06-30 18:00">18:00</time>
+									at <span class="p-location">location</span>
+								</p>
+								<p>Not done since... lastDoneStr</p>
+								<p class="p-description">vcomponent.description</p>
+								<p class="p-category" data-tags="C">C</p>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="pull-left vcomponent-item vcomponent-item-low-priority">
+						<div class="h-event">
+
+							<img class="p-attached" src="./img/Gimnas.png" />
+							<!--{{!--<div class="aside pull-right">10-10-2014</div>--}}-->
+
+							<div class="ribbon">
+								<!--<i class="fa fa-calendar-o fa-2x pull-left"></i>-->
+								<!--<i class="fa fa-2x fa-group pull-left"></i>-->
+								<h2 class="p-summary text-center">summary</h2>
+							</div>
+
+							<div class="extended text-left">
+								<p>From
+									<time class="dt-start" datetime="2013-06-30 12:00">30<sup>th</sup> June 2013, 12:00</time>
+									to <time class="dt-end" datetime="2013-06-30 18:00">18:00</time>
+									at <span class="p-location">location</span>
+								</p>
+								<p>Not done since... lastDoneStr</p>
+								<p class="p-description">vcomponent.description</p>
+								<p class="p-category" data-tags="B">B</p>
+							</div>
+						</div>
+					</div>
+
+				</center>
+			</section>
+
+
+
+
+
+
+			<!--
+				Calendars (calendars.css)
+					page-todo
+					page-events
+						calendar-events-daily
+						calendar-events-weekly
+						calendar-events-monthly
+					page-filters
+					page-charts
+						calendar-chart-bars
+						calendar-chart-history
+						calendar-chart-pie
+			-->
+			<section id="page-todo" class="page col-xs-5 hide"><!-- Pot ser de tamany: 5,6,10 i 12 -->
+				<h1>ToDo</h1><!--Aquí aniran els mateixos vcomponent-item que al challenger-->
+			</section>
+
+			<section id="page-events" class="page col-xs-5 hide"><!-- Pot ser de tamany: 5,6,10 i 12 -->
+				<h1>Daily / Weekly / Monthly</h1>
+			</section>
+
+			<aside id="page-filters" class="ember-view page col-xs-2 hide">
+				<h1>Filters</h1>
+			</aside>
+
+			<section id="page-charts" class="ember-view page col-xs-10 hide">
+				<h1>Charts: Bars, History & Pie</h1>
+			</section>
+
+		</div>
+
+		<!-- JAVASCRIPTS -->
+		<script src="js/vendor/modernizr-2.8.3.min.js"></script>
+		<!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+		<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>-->
+		<script src="js/vendor/jquery-1.11.2.min.js"></script>
+		<script src="css/bootstrap-css-3.3.2/js/bootstrap.min.js"></script>
+		<!--<script src="js/vendor/momentjs/moment-with-locales.min.js"></script>-->
+		<script src="js/vendor/momentjs/moment.min.js"></script>
+		<script src="js/vendor/velocity/velocity.min.js"></script>
+		<script src="js/vendor/metafizzy/masonry.pkgd.min.js"></script>
+		<script src="js/vendor/metafizzy/isotope.pkgd.min.js"></script>
+
+		<!--<script src="js/plugins.js"></script>-->
+		<script src="js/main.js"></script>
+	</body>
+</html>
