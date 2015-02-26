@@ -48,13 +48,13 @@
 		<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 			<div class="container"><!-- .container-fluid -->
 				<div class="navbar-header">
-					<a class="navbar-brand" href="/">HowMany</a>
+					<a class="navbar-brand" href="#/">HowMany</a>
 					<div class="navbar-nav">
-						<a class="btn btn-default btn-sm navbar-btn" href="/new">New</a>
+						<a class="btn btn-default btn-sm navbar-btn" href="#/new">New</a>
 					</div>
 					<div class="navbar-nav pull-right">
-						<a class="navbar-text" href="/configuration">Configuration</a>
-						<a class="navbar-text" href="/credits">Credits</a>
+						<a class="navbar-text" href="#/configuration">Configuration</a>
+						<a class="navbar-text" href="#/credits">Credits</a>
 					</div>
 				</div>
 			</div>
@@ -67,6 +67,7 @@
 
 		<!--
 			Pages container (app.css & pages.css)
+				http://tympanus.net/codrops/2013/05/07/a-collection-of-page-transitions/
 		-->
 		<div id="viewport" class="row pt-perspective">
 
@@ -76,26 +77,34 @@
 
 
 			<!--
-				Challenger (toolbar.css & vcomponent-item.css)
+				Challenger:
+					toolbar.css
+				http://getbootstrap.com/components/#btn-groups-single
+				http://getbootstrap.com/components/#btn-groups-justified
+				http://www.cssflow.com/snippets/top-bar/demo
+				http://codepen.io/Topcoat/pen/kdKyg
+
+					vcomponent-item.css
 				http://css-tricks.com/snippets/css/ribbon/
 				http://demos.jquerymobile.com/1.4.0/listview-grid/listview-grid.html
-				http://codepen.io/Topcoat/pen/kdKyg
-				http://www.cssflow.com/snippets/top-bar/demo
+					DOM:
+				http://microformats.org/wiki/h-event
+				[p/dt/u]-{property}
 			-->
 			<section id="page-challenger" class="page col-xs-12">
-				<!--{{!--
-					http://microformats.org/wiki/h-event
-					[p/dt/u]-{property}
-				--}}-->
-				<div id="page-challenger-tags-filter" class="button-group">
-					<button class="button is-checked" data-filter="*">show all</button>
-					<button class="button" data-filter="filterTag" data-filter-tag="A">A</button>
-					<button class="button" data-filter="filterTag" data-filter-tag="B">B</button>
-					<button class="button" data-filter="filterTag" data-filter-tag="C">C</button>
-					<button class="button" data-filter="filterTag" data-filter-tag="D">D</button>
-					<button class="button" data-filter=".vcomponent-item-high-priority">Priority High</button>
-					<button class="button" data-filter=".vcomponent-item-medium-priority">Priority Medium</button>
-					<button class="button" data-filter=".vcomponent-item-low-priority">Priority Low</button>
+				<div class="row">
+					<div id="page-challenger-tags-filter" class="button-group col-xs-10">
+						<button class="button is-checked" data-filter="*">show all</button>
+						<button class="button" data-filter="filterTag" data-filter-tag="A">Body</button>
+						<button class="button" data-filter="filterTag" data-filter-tag="B">Mind</button>
+						<button class="button" data-filter="filterTag" data-filter-tag="C">Maintenance</button>
+						<button class="button" data-filter="filterTag" data-filter-tag="D">Pleasure</button>
+						<!--
+						<button class="button" data-filter=".vcomponent-item-high-priority">Priority High</button>
+						<button class="button" data-filter=".vcomponent-item-medium-priority">Priority Medium</button>
+						<button class="button" data-filter=".vcomponent-item-low-priority">Priority Low</button>
+						-->
+					</div>
 				</div>
 
 				<center id="page-challenger-masonry-container">
@@ -121,6 +130,13 @@
 								<p>Not done since... lastDoneStr</p>
 								<p class="p-description">vcomponent.description</p>
 								<p class="p-category" data-tags="A;B;C">A, B, C</p>
+								<!-- Other info: 
+								<a class="u-url" href="url">url</p>
+								<a class="dt-duration">duration</p>
+								<a class="p-class">"PUBLIC" / "PRIVATE" / "CONFIDENTIAL"</p>
+								<a class="p-status">"TENTATIVE" / "CONFIRMED" / "CANCELLED"</p>
+								Recurrence & Relationship
+								-->
 							</div>
 						</div>
 					</div>
@@ -394,23 +410,69 @@
 
 			<!--
 				Calendars (calendars.css)
-					page-todo
-					page-events
+   
+					page-todo (like challenger uses vcomponent-item)
+
+					page-events (like challenger uses vcomponent-item)
+							toolbar.css
+						http://getbootstrap.com/components/#btn-groups-single
+						http://www.cssflow.com/snippets/top-bar/demo
+
 						calendar-events-daily
+							http://www.cssflow.com/snippets/notepad
+							http://tympanus.net/codrops/2010/12/14/moleskine-notebook/
+							http://dennern.deviantart.com/art/My-Moleskine-79177093
+							http://indexiatech.github.io/ember-idx-wysiwyg/#/simple
 						calendar-events-weekly
 						calendar-events-monthly
+
 					page-filters
+						-------------------------
+						| Components	120/150	|
+						|	To Do		100/100	|
+						|	Event		10/25	|
+						|	Journal		10/25	|
+						| Calendars		3/3		|
+						| Start Date	11/02/14|
+						| End Date		-		|
+						| Tags			14/15	|
+						| Who			5/5		|
+						| Where			8/10	|
+						| What			8/15	|
+						-------------------------
+						http://mobify.github.io/bellows/
+							Select calendars
+						http://www.sitepoint.com/create-calendar-icon-html5-css3/
+							Select time (for page-events) (When)
+						http://www.cssflow.com/snippets/month-picker
+							Tags, Who, Where, What
+						https://istefo.github.io/ember-select-2/#/examples
+						http://harvesthq.github.io/chosen/
+						http://development.ui-selectize.divshot.io/
+						http://dropkickjs.com/
+						https://rsschermer.github.io/ember-multiselect-checkboxes/
+						
+
 					page-charts
+						http://jeroenooms.github.io/dashboard/snack/
+						http://front-back.com/an-ember-js-gauge-component
+						http://addepar.github.io/#/ember-charts/overview
+
 						calendar-chart-bars
 						calendar-chart-history
 						calendar-chart-pie
+						calendar-chart-windrose
+							http://graves.cl/radar-chart-d3/
+							https://github.com/alangrafu/radar-chart-d3/blob/master/src/radar-chart.js
+							http://www.larsko.org/v/euc/
+							http://bl.ocks.org/nbremer/raw/6506614/
 			-->
 			<section id="page-todo" class="page col-xs-5 hide"><!-- Pot ser de tamany: 5,6,10 i 12 -->
 				<h1>ToDo</h1><!--Aquí aniran els mateixos vcomponent-item que al challenger-->
 			</section>
 
 			<section id="page-events" class="page col-xs-5 hide"><!-- Pot ser de tamany: 5,6,10 i 12 -->
-				<h1>Daily / Weekly / Monthly</h1>
+				<h1>Daily / Weekly / Monthly</h1><!-- toolbar like challenger -->
 			</section>
 
 			<aside id="page-filters" class="ember-view page col-xs-2 hide">
@@ -421,6 +483,30 @@
 				<h1>Charts: Bars, History & Pie</h1>
 			</section>
 
+			
+			<!-- Modals: CRUD vcomponent & calendar. (CRUD = Create, Read, Update, Delete)
+			https://github.com/edgycircle/ember-pikaday
+			http://squirelabs.github.io/ember-datepicker/
+			http://sul.im/ember-cli-bootstrap-datepicker/
+			http://www.dangrossman.info/2012/08/20/a-date-range-picker-for-twitter-bootstrap/
+			https://www.npmjs.com/package/ember-cli-notifications
+   
+			Others:
+			http://masonry.desandro.com/
+			http://isotope.metafizzy.co/
+			http://momentjs.com/
+			http://formatjs.io/
+			http://hammerjs.github.io/
+			http://julian.com/research/velocity/
+
+			https://github.com/dockyard/ember-easy-form
+			https://github.com/dockyard/ember-validations
+			https://github.com/andrewreedy/ember-dc
+				https://github.com/dc-js/dc.js
+				https://github.com/square/crossfilter
+				https://github.com/mbostock/d3/wiki
+			https://github.com/mozilla-comm/ical.js
+			-->
 		</div>
 
 		<!-- JAVASCRIPTS -->
