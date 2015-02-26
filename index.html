@@ -74,7 +74,7 @@
             Pages container (app.css & pages.css)
                 http://tympanus.net/codrops/2013/05/07/a-collection-of-page-transitions/
         -->
-        <div class="container">
+        <div class="container-fluid">
             <div id="viewport" class="row pt-perspective">
                 <!--
                     Challenger:
@@ -91,365 +91,452 @@
                     http://microformats.org/wiki/h-event
                     [p/dt/u]-{property}
                 -->
-                <!-- <button type="button" class="btn btn-default navbar-toggle pull-left">
-                                <span class="glyphicon glyphicon-apple"><span class="icon_text">Body</span></span>
-                            </button>
-                            <button type="button" class="btn btn-default navbar-toggle pull-left">
-                                <i class="fa fa-lightbulb-o"><span class="icon_text">Mind</span></i>
-                            </button>
-                            <button type="button" class="btn btn-default navbar-toggle pull-left">
-                                <i class="fa fa-wrench"><span class="icon_text">Maintenance</span></i>
-                            </button>
-                            <button type="button" class="btn btn-default navbar-toggle pull-left">
-                                <i class="fa fa-coffee"><span class="icon_text">Pleasure</span></i>
-                            </button>-->
+
+                <!--
+                <button type="button" class="btn btn-default navbar-toggle pull-left">
+                    <span class="glyphicon glyphicon-apple"><span class="icon_text">Body</span></span>
+                </button>
+                <button type="button" class="btn btn-default navbar-toggle pull-left">
+                    <i class="fa fa-lightbulb-o"><span class="icon_text">Mind</span></i>
+                </button>
+                <button type="button" class="btn btn-default navbar-toggle pull-left">
+                    <i class="fa fa-wrench"><span class="icon_text">Maintenance</span></i>
+                </button>
+                <button type="button" class="btn btn-default navbar-toggle pull-left">
+                    <i class="fa fa-coffee"><span class="icon_text">Pleasure</span></i>
+                </button>
+                -->
 
                 <section id="page-challenger" class="page col-xs-12 col-md-12">
-                    <div class= "col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-1">
-                        <div class="gly_appear">
-                                <button type="button" class="btn btn-default navbar-toggle pull-left">
-                                    <span class="glyphicon glyphicon-apple"></span>
-                                </button>
-                                <button type="button" class="btn btn-default navbar-toggle pull-left">
-                                    <i class="fa fa-lightbulb-o"></i>
-                                </button>
-                                <button type="button" class="btn btn-default navbar-toggle pull-left">
-                                    <i class="fa fa-wrench"></i>
-                                </button>
-                                <button type="button" class="btn btn-default navbar-toggle pull-left">
-                                    <i class="fa fa-coffee"></i>
-                                </button>
-                                 <button type="button" class="btn btn-default navbar-toggle pull-left">
-                                    <span class="glyphicon glyphicon-sort-by-attributes-alt"></span>
-                                </button>
-                                <button type="button" class="btn btn-default navbar-toggle pull-left">
-                                    <span class="glyphicon glyphicon-sort-by-attributes"></span>
-                                </button>
-                        </div>
-                        <div id="page-challenger-tags-filter">
-                            <div class="gly_md col-sm-12 col-sm-offset-5 col-md-12 col-md-offset-5 ">
-                                <button class="show_all btn btn-default collapse navbar-collapse is-checked" data-filter="*">Show all</button>
-                            </div>
-                            <div class="gly_md btn-group pull-left col-md-5 col-sm-5" role="group">
-                                <button type="button" class="btn btn-default collapse navbar-collapse" data-filter="filterTag" data-filter-tag="A">
-                                    <i class="fa fa-user"><span class="correct_font"><br>Body</span></i>
-                                </button>
-                                <button type="button" class="btn btn-default collapse navbar-collapse" data-filter="filterTag" data-filter-tag="B">
-                                    <i class="fa fa-lightbulb-o"><span class="correct_font"><br>Mind</span></i>
-                                </button>
-                                <button type="button" class="btn btn-default collapse navbar-collapse" data-filter="filterTag" data-filter-tag="C">
-                                    <i class="fa fa-wrench"><span class="correct_font"><br>Support</span></i>
-                                </button>
-                                <button type="button" class="btn btn-default collapse navbar-collapse" data-filter="filterTag" data-filter-tag="D">
-                                    <i class="fa fa-coffee"><span class="correct_font"><br>Pleasure</span></i>
-                                </button>
-                            </div>
-
-                            <div class="gly_md priority_md btn-group pull-right col-sm-5 col-sm-offset-1 col-md-5 col-md-offset-1" role="group">
-                                <button type="button" class="btn btn-default collapse navbar-collapse" data-filter=".vcomponent-item-high-priority">
-                                    <span class="glyphicon glyphicon-arrow-up"><span class="correct_font"><br>Priority</span></span>
-                                </button>
-                                <button type="button" class="btn btn-default collapse navbar-collapse" data-filter=".vcomponent-item-medium-priority">
-                                    <span class="glyphicon glyphicon-resize-vertical"><span class="correct_font"><br>Priority</span></span>
-                                </button>
-                                <button type="button" class="btn btn-default collapse navbar-collapse" data-filter=".vcomponent-item-low-priority">
-                                   <span class="glyphicon glyphicon-arrow-down"><span class="correct_font"><br>Priority</span></span>
-                                </button>
+                    <div id="challenger-toolbar" class="row">
+                        <div class="col-xs-10 col-xs-offset-1">
+                            <div class="btn-group btn-group-justified" role="group">
+                                <div class="btn-group" role="group">
+                                    <button type="button" class="btn btn-default" id="challenger-toolbar-btn-mind">
+                                        <i class="fa fa-lightbulb-o"><span class="correct_font"><br>Mind</span></i>
+                                    </button>
+                                </div>
+                                <div class="btn-group" role="group">
+                                    <button type="button" class="btn btn-default" id="challenger-toolbar-btn-body">
+                                        <i class="fa fa-user"><span class="correct_font"><br>Body</span></i>
+                                    </button>
+                                </div>
+                                <div class="btn-group" role="group">
+                                    <button type="button" class="btn btn-default" id="challenger-toolbar-btn-pleasure">
+                                        <i class="fa fa-coffee"><span class="correct_font"><br>Pleasure</span></i>
+                                    </button>
+                                </div>
+                                <div class="btn-group" role="group">
+                                    <button type="button" class="btn btn-default" id="challenger-toolbar-btn-support">
+                                        <i class="fa fa-wrench"><span class="correct_font"><br>Support</span></i>
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
-                <div class="row">
-                    <div id="page-challenger-masonry-container" class="col-xs-9 col-xs-offset-1 col-md-10">
-                        <div class="pull-left vcomponent-item vcomponent-item-high-priority">
-                            <div class="h-event">
-                                <img class="p-attached" src="./img/Gimnas.png" />
-                                <!--{{!--<div class="aside pull-right">10-10-2014</div>--}}-->
-                                <div class="ribbon">
-                                    <!--<i class="fa fa-calendar-o fa-2x pull-left"></i>-->
-                                    <!--<i class="fa fa-2x fa-group pull-left"></i>-->
-                                    <h2 class="p-summary text-center">summary</h2>
+                    <div id="challenger-toolbar-mind" class="row hide">
+                        <div class="col-xs-8 col-xs-offset-2">
+                            <div class="btn-group btn-group-justified" role="group">
+                                <div class="btn-group" role="group">
+                                    <button type="button" class="btn btn-default">
+                                        <i class="fa fa-book"><span class="correct_font"><br>Culture/Intelligence/Learn</span></i>
+                                    </button>
                                 </div>
-
-                                <div class="extended text-left">
-                                    <p>From
-                                        <time class="dt-start" datetime="2013-06-30 12:00">30<sup>th</sup> June 2013, 12:00</time>
-                                        to <time class="dt-end" datetime="2013-06-30 18:00">18:00</time>
-                                        at <span class="p-location">location</span>
-                                    </p>
-                                    <p>Not done since... lastDoneStr</p>
-                                    <p class="p-description">vcomponent.description</p>
-                                    <p class="p-category" data-tags="A;B;C">A, B, C</p>
-                                    <!-- Other info:
-                                    <a class="u-url" href="url">url</p>
-                                    <a class="dt-duration">duration</p>
-                                    <a class="p-class">"PUBLIC" / "PRIVATE" / "CONFIDENTIAL"</p>
-                                    <a class="p-status">"TENTATIVE" / "CONFIRMED" / "CANCELLED"</p>
-                                    Recurrence & Relationship
-                                    -->
+                                <div class="btn-group" role="group">
+                                    <button type="button" class="btn btn-default">
+                                        <!-- fa alternatives: beaker globe -->
+                                        <i class="fa fa-lightbulb-o"><span class="correct_font"><br>Research/Exploration</span></i>
+                                    </button>
+                                </div>
+                                <div class="btn-group" role="group">
+                                    <button type="button" class="btn btn-default">
+                                        <i class="fa fa-expand"><span class="correct_font"><br>Altruism/Community</span></i>
+                                    </button>
+                                </div>
+                                <div class="btn-group" role="group">
+                                    <button type="button" class="btn btn-default">
+                                        <i class="fa fa-compass"><span class="correct_font"><br>Center/Moral/Spirituality</span></i>
+                                    </button>
                                 </div>
                             </div>
                         </div>
-
-                        <div class="pull-left vcomponent-item vcomponent-item-low-priority">
-                            <div class="h-event">
-
-                                <img class="p-attached" src="./img/Gimnas.png" />
-                                <!--{{!--<div class="aside pull-right">10-10-2014</div>--}}-->
-
-                                <div class="ribbon">
-                                    <!--<i class="fa fa-calendar-o fa-2x pull-left"></i>-->
-                                    <!--<i class="fa fa-2x fa-group pull-left"></i>-->
-                                    <h2 class="p-summary text-center">summary</h2>
-                                </div>
-
-                                <div class="extended text-left">
-                                    <p>From
-                                        <time class="dt-start" datetime="2013-06-30 12:00">30<sup>th</sup> June 2013, 12:00</time>
-                                        to <time class="dt-end" datetime="2013-06-30 18:00">18:00</time>
-                                        at <span class="p-location">location</span>
-                                    </p>
-                                    <p>Not done since... lastDoneStr</p>
-                                    <p class="p-description">vcomponent.description</p>
-                                    <p class="p-category" data-tags="A;B">A, B</p>
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <div class="pull-left vcomponent-item vcomponent-item-medium-priority">
-                            <div class="h-event">
-
-                                <img class="p-attached" src="./img/Gimnas.png" />
-                                <!--{{!--<div class="aside pull-right">10-10-2014</div>--}}-->
-
-                                <div class="ribbon">
-                                    <!--<i class="fa fa-calendar-o fa-2x pull-left"></i>-->
-                                    <!--<i class="fa fa-2x fa-group pull-left"></i>-->
-                                    <h2 class="p-summary text-center">summary</h2>
-                                </div>
-
-                                <div class="extended text-left">
-                                    <p>From
-                                        <time class="dt-start" datetime="2013-06-30 12:00">30<sup>th</sup> June 2013, 12:00</time>
-                                        to <time class="dt-end" datetime="2013-06-30 18:00">18:00</time>
-                                        at <span class="p-location">location</span>
-                                    </p>
-                                    <p>Not done since... lastDoneStr</p>
-                                    <p class="p-description">vcomponent.description</p>
-                                    <p class="p-category" data-tags="D">D</p>
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <div class="pull-left vcomponent-item vcomponent-item-high-priority">
-                            <div class="h-event">
-
-                                <img class="p-attached" src="./img/Gimnas.png" />
-                                <!--{{!--<div class="aside pull-right">10-10-2014</div>--}}-->
-
-                                <div class="ribbon">
-                                    <!--<i class="fa fa-calendar-o fa-2x pull-left"></i>-->
-                                    <!--<i class="fa fa-2x fa-group pull-left"></i>-->
-                                    <h2 class="p-summary text-center">summary</h2>
-                                </div>
-
-                                <div class="extended text-left">
-                                    <p>From
-                                        <time class="dt-start" datetime="2013-06-30 12:00">30<sup>th</sup> June 2013, 12:00</time>
-                                        to <time class="dt-end" datetime="2013-06-30 18:00">18:00</time>
-                                        at <span class="p-location">location</span>
-                                    </p>
-                                    <p>Not done since... lastDoneStr</p>
-                                    <p class="p-description">vcomponent.description</p>
-                                    <p class="p-category" data-tags="A;C">A, C</p>
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <div class="pull-left vcomponent-item vcomponent-item-low-priority">
-                            <div class="h-event">
-
-                                <img class="p-attached" src="./img/Gimnas.png" />
-                                <!--{{!--<div class="aside pull-right">10-10-2014</div>--}}-->
-
-                                <div class="ribbon">
-                                    <!--<i class="fa fa-calendar-o fa-2x pull-left"></i>-->
-                                    <!--<i class="fa fa-2x fa-group pull-left"></i>-->
-                                    <h2 class="p-summary text-center">summary</h2>
-                                </div>
-
-                                <div class="extended text-left">
-                                    <p>From
-                                        <time class="dt-start" datetime="2013-06-30 12:00">30<sup>th</sup> June 2013, 12:00</time>
-                                        to <time class="dt-end" datetime="2013-06-30 18:00">18:00</time>
-                                        at <span class="p-location">location</span>
-                                    </p>
-                                    <p>Not done since... lastDoneStr</p>
-                                    <p class="p-description">vcomponent.description</p>
-                                    <p class="p-category" data-tags="A;D">A, D</p>
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <div class="pull-left vcomponent-item vcomponent-item-low-priority">
-                            <div class="h-event">
-
-                                <img class="p-attached" src="./img/Gimnas.png" />
-                                <!--{{!--<div class="aside pull-right">10-10-2014</div>--}}-->
-
-                                <div class="ribbon">
-                                    <!--<i class="fa fa-calendar-o fa-2x pull-left"></i>-->
-                                    <!--<i class="fa fa-2x fa-group pull-left"></i>-->
-                                    <h2 class="p-summary text-center">summary</h2>
-                                </div>
-
-                                <div class="extended text-left">
-                                    <p>From
-                                        <time class="dt-start" datetime="2013-06-30 12:00">30<sup>th</sup> June 2013, 12:00</time>
-                                        to <time class="dt-end" datetime="2013-06-30 18:00">18:00</time>
-                                        at <span class="p-location">location</span>
-                                    </p>
-                                    <p>Not done since... lastDoneStr</p>
-                                    <p class="p-description">vcomponent.description</p>
-                                    <p class="p-category" data-tags="A;B;C">A, B, C</p>
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <div class="pull-left vcomponent-item vcomponent-item-medium-priority">
-                            <div class="h-event">
-
-                                <img class="p-attached" src="./img/Gimnas.png" />
-                                <!--{{!--<div class="aside pull-right">10-10-2014</div>--}}-->
-
-                                <div class="ribbon">
-                                    <!--<i class="fa fa-calendar-o fa-2x pull-left"></i>-->
-                                    <!--<i class="fa fa-2x fa-group pull-left"></i>-->
-                                    <h2 class="p-summary text-center">summary</h2>
-                                </div>
-
-                                <div class="extended text-left">
-                                    <p>From
-                                        <time class="dt-start" datetime="2013-06-30 12:00">30<sup>th</sup> June 2013, 12:00</time>
-                                        to <time class="dt-end" datetime="2013-06-30 18:00">18:00</time>
-                                        at <span class="p-location">location</span>
-                                    </p>
-                                    <p>Not done since... lastDoneStr</p>
-                                    <p class="p-description">vcomponent.description</p>
-                                    <p class="p-category" data-tags="B;C">B, C</p>
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <div class="pull-left vcomponent-item vcomponent-item-high-priority">
-                            <div class="h-event">
-
-                                <img class="p-attached" src="./img/Gimnas.png" />
-                                <!--{{!--<div class="aside pull-right">10-10-2014</div>--}}-->
-
-                                <div class="ribbon">
-                                    <!--<i class="fa fa-calendar-o fa-2x pull-left"></i>-->
-                                    <!--<i class="fa fa-2x fa-group pull-left"></i>-->
-                                    <h2 class="p-summary text-center">summary</h2>
-                                </div>
-
-                                <div class="extended text-left">
-                                    <p>From
-                                        <time class="dt-start" datetime="2013-06-30 12:00">30<sup>th</sup> June 2013, 12:00</time>
-                                        to <time class="dt-end" datetime="2013-06-30 18:00">18:00</time>
-                                        at <span class="p-location">location</span>
-                                    </p>
-                                    <p>Not done since... lastDoneStr</p>
-                                    <p class="p-description">vcomponent.description</p>
-                                    <p class="p-category" data-tags="A">A</p>
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <div class="pull-left vcomponent-item vcomponent-item-high-priority">
-                            <div class="h-event">
-
-                                <img class="p-attached" src="./img/Gimnas.png" />
-                                <!--{{!--<div class="aside pull-right">10-10-2014</div>--}}-->
-
-                                <div class="ribbon">
-                                    <!--<i class="fa fa-calendar-o fa-2x pull-left"></i>-->
-                                    <!--<i class="fa fa-2x fa-group pull-left"></i>-->
-                                    <h2 class="p-summary text-center">summary</h2>
-                                </div>
-
-                                <div class="extended text-left">
-                                    <p>From
-                                        <time class="dt-start" datetime="2013-06-30 12:00">30<sup>th</sup> June 2013, 12:00</time>
-                                        to <time class="dt-end" datetime="2013-06-30 18:00">18:00</time>
-                                        at <span class="p-location">location</span>
-                                    </p>
-                                    <p>Not done since... lastDoneStr</p>
-                                    <p class="p-description">vcomponent.description</p>
-                                    <p class="p-category" data-tags="B;C">B, C</p>
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <div class="pull-left vcomponent-item vcomponent-item-medium-priority">
-                            <div class="h-event">
-
-                                <img class="p-attached" src="./img/Gimnas.png" />
-                                <!--{{!--<div class="aside pull-right">10-10-2014</div>--}}-->
-
-                                <div class="ribbon">
-                                    <!--<i class="fa fa-calendar-o fa-2x pull-left"></i>-->
-                                    <!--<i class="fa fa-2x fa-group pull-left"></i>-->
-                                    <h2 class="p-summary text-center">summary</h2>
-                                </div>
-
-                                <div class="extended text-left">
-                                    <p>From
-                                        <time class="dt-start" datetime="2013-06-30 12:00">30<sup>th</sup> June 2013, 12:00</time>
-                                        to <time class="dt-end" datetime="2013-06-30 18:00">18:00</time>
-                                        at <span class="p-location">location</span>
-                                    </p>
-                                    <p>Not done since... lastDoneStr</p>
-                                    <p class="p-description">vcomponent.description</p>
-                                    <p class="p-category" data-tags="C">C</p>
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <div class="pull-left vcomponent-item vcomponent-item-low-priority">
-                            <div class="h-event">
-
-                                <img class="p-attached" src="./img/Gimnas.png" />
-                                <!--{{!--<div class="aside pull-right">10-10-2014</div>--}}-->
-
-                                <div class="ribbon">
-                                    <!--<i class="fa fa-calendar-o fa-2x pull-left"></i>-->
-                                    <!--<i class="fa fa-2x fa-group pull-left"></i>-->
-                                    <h2 class="p-summary text-center">summary</h2>
-                                </div>
-
-                                <div class="extended text-left">
-                                    <p>From
-                                        <time class="dt-start" datetime="2013-06-30 12:00">30<sup>th</sup> June 2013, 12:00</time>
-                                        to <time class="dt-end" datetime="2013-06-30 18:00">18:00</time>
-                                        at <span class="p-location">location</span>
-                                    </p>
-                                    <p>Not done since... lastDoneStr</p>
-                                    <p class="p-description">vcomponent.description</p>
-                                    <p class="p-category" data-tags="B">B</p>
-                                </div>
-                            </div>
-                        </div>
-
                     </div>
+                    <div id="challenger-toolbar-body" class="row hide">
+                        <div class="col-xs-8 col-xs-offset-2">
+                            <div class="btn-group btn-group-justified" role="group">
+                                <div class="btn-group" role="group">
+                                    <button type="button" class="btn btn-default">
+                                        <i class="fa fa-stethoscope"><span class="correct_font"><br>Healthcare</span></i>
+                                    </button>
+                                </div>
+                                <div class="btn-group" role="group">
+                                    <button type="button" class="btn btn-default">
+                                        <!-- fa alternatives: beaker globe -->
+                                        <i class="fa fa-dashboard"><span class="correct_font"><br>Sport</span></i>
+                                    </button>
+                                </div>
+                                <div class="btn-group" role="group">
+                                    <button type="button" class="btn btn-default">
+                                        <i class="fa fa-apple"><span class="correct_font"><br>Nutrition</span></i>
+                                    </button>
+                                </div>
+                                <div class="btn-group" role="group">
+                                    <button type="button" class="btn btn-default">
+                                        <i class="fa fa-moon-o"><span class="correct_font"><br>Rest, Hygiene & Aesthetic</span></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--
+                    <div class="row">
+                        <div class= "col-xs-10 col-xs-offset-1 col-md-10 col-md-offset-1">
+                            <div class="gly_appear">
+                                    <button type="button" class="btn btn-default navbar-toggle pull-left">
+                                        <span class="glyphicon glyphicon-apple"></span>
+                                    </button>
+                                    <button type="button" class="btn btn-default navbar-toggle pull-left">
+                                        <i class="fa fa-lightbulb-o"></i>
+                                    </button>
+                                    <button type="button" class="btn btn-default navbar-toggle pull-left">
+                                        <i class="fa fa-wrench"></i>
+                                    </button>
+                                    <button type="button" class="btn btn-default navbar-toggle pull-left">
+                                        <i class="fa fa-coffee"></i>
+                                    </button>
+                                     <button type="button" class="btn btn-default navbar-toggle pull-left">
+                                        <span class="glyphicon glyphicon-sort-by-attributes-alt"></span>
+                                    </button>
+                                    <button type="button" class="btn btn-default navbar-toggle pull-left">
+                                        <span class="glyphicon glyphicon-sort-by-attributes"></span>
+                                    </button>
+                            </div>
+                            <div id="page-challenger-tags-filter">
+                                <div class="gly_md col-sm-12 col-sm-offset-5 col-md-12 col-md-offset-5 ">
+                                    <button class="show_all btn btn-default collapse navbar-collapse is-checked" data-filter="*">Show all</button>
+                                </div>
+                                <div class="gly_md btn-group pull-left col-md-5 col-sm-5" role="group">
+                                    <button type="button" class="btn btn-default collapse navbar-collapse" data-filter="filterTag" data-filter-tag="A">
+                                        <i class="fa fa-user"><span class="correct_font"><br>Body</span></i>
+                                    </button>
+                                    <button type="button" class="btn btn-default collapse navbar-collapse" data-filter="filterTag" data-filter-tag="B">
+                                        <i class="fa fa-lightbulb-o"><span class="correct_font"><br>Mind</span></i>
+                                    </button>
+                                    <button type="button" class="btn btn-default collapse navbar-collapse" data-filter="filterTag" data-filter-tag="C">
+                                        <i class="fa fa-wrench"><span class="correct_font"><br>Support</span></i>
+                                    </button>
+                                    <button type="button" class="btn btn-default collapse navbar-collapse" data-filter="filterTag" data-filter-tag="D">
+                                        <i class="fa fa-coffee"><span class="correct_font"><br>Pleasure</span></i>
+                                    </button>
+                                </div>
+
+                                <div class="gly_md priority_md btn-group pull-right col-sm-5 col-sm-offset-1 col-md-5 col-md-offset-1" role="group">
+                                    <button type="button" class="btn btn-default collapse navbar-collapse" data-filter=".vcomponent-item-high-priority">
+                                        <span class="glyphicon glyphicon-arrow-up"><span class="correct_font"><br>Priority</span></span>
+                                    </button>
+                                    <button type="button" class="btn btn-default collapse navbar-collapse" data-filter=".vcomponent-item-medium-priority">
+                                        <span class="glyphicon glyphicon-resize-vertical"><span class="correct_font"><br>Priority</span></span>
+                                    </button>
+                                    <button type="button" class="btn btn-default collapse navbar-collapse" data-filter=".vcomponent-item-low-priority">
+                                       <span class="glyphicon glyphicon-arrow-down"><span class="correct_font"><br>Priority</span></span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    -->
+                    <div class="row">
+                        <div id="page-challenger-masonry-container" class="col-xs-9 col-xs-offset-1 col-md-10">
+                            <div class="pull-left vcomponent-item vcomponent-item-high-priority">
+                                <div class="h-event">
+                                    <img class="p-attached" src="./img/Gimnas.png" />
+                                    <!--{{!--<div class="aside pull-right">10-10-2014</div>--}}-->
+                                    <div class="ribbon">
+                                        <!--<i class="fa fa-calendar-o fa-2x pull-left"></i>-->
+                                        <!--<i class="fa fa-2x fa-group pull-left"></i>-->
+                                        <h2 class="p-summary text-center">summary</h2>
+                                    </div>
+
+                                    <div class="extended text-left">
+                                        <p>From
+                                            <time class="dt-start" datetime="2013-06-30 12:00">30<sup>th</sup> June 2013, 12:00</time>
+                                            to <time class="dt-end" datetime="2013-06-30 18:00">18:00</time>
+                                            at <span class="p-location">location</span>
+                                        </p>
+                                        <p>Not done since... lastDoneStr</p>
+                                        <p class="p-description">vcomponent.description</p>
+                                        <p class="p-category" data-tags="A;B;C">A, B, C</p>
+                                        <!-- Other info:
+                                        <a class="u-url" href="url">url</p>
+                                        <a class="dt-duration">duration</p>
+                                        <a class="p-class">"PUBLIC" / "PRIVATE" / "CONFIDENTIAL"</p>
+                                        <a class="p-status">"TENTATIVE" / "CONFIRMED" / "CANCELLED"</p>
+                                        Recurrence & Relationship
+                                        -->
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="pull-left vcomponent-item vcomponent-item-low-priority">
+                                <div class="h-event">
+
+                                    <img class="p-attached" src="./img/Gimnas.png" />
+                                    <!--{{!--<div class="aside pull-right">10-10-2014</div>--}}-->
+
+                                    <div class="ribbon">
+                                        <!--<i class="fa fa-calendar-o fa-2x pull-left"></i>-->
+                                        <!--<i class="fa fa-2x fa-group pull-left"></i>-->
+                                        <h2 class="p-summary text-center">summary</h2>
+                                    </div>
+
+                                    <div class="extended text-left">
+                                        <p>From
+                                            <time class="dt-start" datetime="2013-06-30 12:00">30<sup>th</sup> June 2013, 12:00</time>
+                                            to <time class="dt-end" datetime="2013-06-30 18:00">18:00</time>
+                                            at <span class="p-location">location</span>
+                                        </p>
+                                        <p>Not done since... lastDoneStr</p>
+                                        <p class="p-description">vcomponent.description</p>
+                                        <p class="p-category" data-tags="A;B">A, B</p>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="pull-left vcomponent-item vcomponent-item-medium-priority">
+                                <div class="h-event">
+
+                                    <img class="p-attached" src="./img/Gimnas.png" />
+                                    <!--{{!--<div class="aside pull-right">10-10-2014</div>--}}-->
+
+                                    <div class="ribbon">
+                                        <!--<i class="fa fa-calendar-o fa-2x pull-left"></i>-->
+                                        <!--<i class="fa fa-2x fa-group pull-left"></i>-->
+                                        <h2 class="p-summary text-center">summary</h2>
+                                    </div>
+
+                                    <div class="extended text-left">
+                                        <p>From
+                                            <time class="dt-start" datetime="2013-06-30 12:00">30<sup>th</sup> June 2013, 12:00</time>
+                                            to <time class="dt-end" datetime="2013-06-30 18:00">18:00</time>
+                                            at <span class="p-location">location</span>
+                                        </p>
+                                        <p>Not done since... lastDoneStr</p>
+                                        <p class="p-description">vcomponent.description</p>
+                                        <p class="p-category" data-tags="D">D</p>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="pull-left vcomponent-item vcomponent-item-high-priority">
+                                <div class="h-event">
+
+                                    <img class="p-attached" src="./img/Gimnas.png" />
+                                    <!--{{!--<div class="aside pull-right">10-10-2014</div>--}}-->
+
+                                    <div class="ribbon">
+                                        <!--<i class="fa fa-calendar-o fa-2x pull-left"></i>-->
+                                        <!--<i class="fa fa-2x fa-group pull-left"></i>-->
+                                        <h2 class="p-summary text-center">summary</h2>
+                                    </div>
+
+                                    <div class="extended text-left">
+                                        <p>From
+                                            <time class="dt-start" datetime="2013-06-30 12:00">30<sup>th</sup> June 2013, 12:00</time>
+                                            to <time class="dt-end" datetime="2013-06-30 18:00">18:00</time>
+                                            at <span class="p-location">location</span>
+                                        </p>
+                                        <p>Not done since... lastDoneStr</p>
+                                        <p class="p-description">vcomponent.description</p>
+                                        <p class="p-category" data-tags="A;C">A, C</p>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="pull-left vcomponent-item vcomponent-item-low-priority">
+                                <div class="h-event">
+
+                                    <img class="p-attached" src="./img/Gimnas.png" />
+                                    <!--{{!--<div class="aside pull-right">10-10-2014</div>--}}-->
+
+                                    <div class="ribbon">
+                                        <!--<i class="fa fa-calendar-o fa-2x pull-left"></i>-->
+                                        <!--<i class="fa fa-2x fa-group pull-left"></i>-->
+                                        <h2 class="p-summary text-center">summary</h2>
+                                    </div>
+
+                                    <div class="extended text-left">
+                                        <p>From
+                                            <time class="dt-start" datetime="2013-06-30 12:00">30<sup>th</sup> June 2013, 12:00</time>
+                                            to <time class="dt-end" datetime="2013-06-30 18:00">18:00</time>
+                                            at <span class="p-location">location</span>
+                                        </p>
+                                        <p>Not done since... lastDoneStr</p>
+                                        <p class="p-description">vcomponent.description</p>
+                                        <p class="p-category" data-tags="A;D">A, D</p>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="pull-left vcomponent-item vcomponent-item-low-priority">
+                                <div class="h-event">
+
+                                    <img class="p-attached" src="./img/Gimnas.png" />
+                                    <!--{{!--<div class="aside pull-right">10-10-2014</div>--}}-->
+
+                                    <div class="ribbon">
+                                        <!--<i class="fa fa-calendar-o fa-2x pull-left"></i>-->
+                                        <!--<i class="fa fa-2x fa-group pull-left"></i>-->
+                                        <h2 class="p-summary text-center">summary</h2>
+                                    </div>
+
+                                    <div class="extended text-left">
+                                        <p>From
+                                            <time class="dt-start" datetime="2013-06-30 12:00">30<sup>th</sup> June 2013, 12:00</time>
+                                            to <time class="dt-end" datetime="2013-06-30 18:00">18:00</time>
+                                            at <span class="p-location">location</span>
+                                        </p>
+                                        <p>Not done since... lastDoneStr</p>
+                                        <p class="p-description">vcomponent.description</p>
+                                        <p class="p-category" data-tags="A;B;C">A, B, C</p>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="pull-left vcomponent-item vcomponent-item-medium-priority">
+                                <div class="h-event">
+
+                                    <img class="p-attached" src="./img/Gimnas.png" />
+                                    <!--{{!--<div class="aside pull-right">10-10-2014</div>--}}-->
+
+                                    <div class="ribbon">
+                                        <!--<i class="fa fa-calendar-o fa-2x pull-left"></i>-->
+                                        <!--<i class="fa fa-2x fa-group pull-left"></i>-->
+                                        <h2 class="p-summary text-center">summary</h2>
+                                    </div>
+
+                                    <div class="extended text-left">
+                                        <p>From
+                                            <time class="dt-start" datetime="2013-06-30 12:00">30<sup>th</sup> June 2013, 12:00</time>
+                                            to <time class="dt-end" datetime="2013-06-30 18:00">18:00</time>
+                                            at <span class="p-location">location</span>
+                                        </p>
+                                        <p>Not done since... lastDoneStr</p>
+                                        <p class="p-description">vcomponent.description</p>
+                                        <p class="p-category" data-tags="B;C">B, C</p>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="pull-left vcomponent-item vcomponent-item-high-priority">
+                                <div class="h-event">
+
+                                    <img class="p-attached" src="./img/Gimnas.png" />
+                                    <!--{{!--<div class="aside pull-right">10-10-2014</div>--}}-->
+
+                                    <div class="ribbon">
+                                        <!--<i class="fa fa-calendar-o fa-2x pull-left"></i>-->
+                                        <!--<i class="fa fa-2x fa-group pull-left"></i>-->
+                                        <h2 class="p-summary text-center">summary</h2>
+                                    </div>
+
+                                    <div class="extended text-left">
+                                        <p>From
+                                            <time class="dt-start" datetime="2013-06-30 12:00">30<sup>th</sup> June 2013, 12:00</time>
+                                            to <time class="dt-end" datetime="2013-06-30 18:00">18:00</time>
+                                            at <span class="p-location">location</span>
+                                        </p>
+                                        <p>Not done since... lastDoneStr</p>
+                                        <p class="p-description">vcomponent.description</p>
+                                        <p class="p-category" data-tags="A">A</p>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="pull-left vcomponent-item vcomponent-item-high-priority">
+                                <div class="h-event">
+
+                                    <img class="p-attached" src="./img/Gimnas.png" />
+                                    <!--{{!--<div class="aside pull-right">10-10-2014</div>--}}-->
+
+                                    <div class="ribbon">
+                                        <!--<i class="fa fa-calendar-o fa-2x pull-left"></i>-->
+                                        <!--<i class="fa fa-2x fa-group pull-left"></i>-->
+                                        <h2 class="p-summary text-center">summary</h2>
+                                    </div>
+
+                                    <div class="extended text-left">
+                                        <p>From
+                                            <time class="dt-start" datetime="2013-06-30 12:00">30<sup>th</sup> June 2013, 12:00</time>
+                                            to <time class="dt-end" datetime="2013-06-30 18:00">18:00</time>
+                                            at <span class="p-location">location</span>
+                                        </p>
+                                        <p>Not done since... lastDoneStr</p>
+                                        <p class="p-description">vcomponent.description</p>
+                                        <p class="p-category" data-tags="B;C">B, C</p>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="pull-left vcomponent-item vcomponent-item-medium-priority">
+                                <div class="h-event">
+
+                                    <img class="p-attached" src="./img/Gimnas.png" />
+                                    <!--{{!--<div class="aside pull-right">10-10-2014</div>--}}-->
+
+                                    <div class="ribbon">
+                                        <!--<i class="fa fa-calendar-o fa-2x pull-left"></i>-->
+                                        <!--<i class="fa fa-2x fa-group pull-left"></i>-->
+                                        <h2 class="p-summary text-center">summary</h2>
+                                    </div>
+
+                                    <div class="extended text-left">
+                                        <p>From
+                                            <time class="dt-start" datetime="2013-06-30 12:00">30<sup>th</sup> June 2013, 12:00</time>
+                                            to <time class="dt-end" datetime="2013-06-30 18:00">18:00</time>
+                                            at <span class="p-location">location</span>
+                                        </p>
+                                        <p>Not done since... lastDoneStr</p>
+                                        <p class="p-description">vcomponent.description</p>
+                                        <p class="p-category" data-tags="C">C</p>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="pull-left vcomponent-item vcomponent-item-low-priority">
+                                <div class="h-event">
+
+                                    <img class="p-attached" src="./img/Gimnas.png" />
+                                    <!--{{!--<div class="aside pull-right">10-10-2014</div>--}}-->
+
+                                    <div class="ribbon">
+                                        <!--<i class="fa fa-calendar-o fa-2x pull-left"></i>-->
+                                        <!--<i class="fa fa-2x fa-group pull-left"></i>-->
+                                        <h2 class="p-summary text-center">summary</h2>
+                                    </div>
+
+                                    <div class="extended text-left">
+                                        <p>From
+                                            <time class="dt-start" datetime="2013-06-30 12:00">30<sup>th</sup> June 2013, 12:00</time>
+                                            to <time class="dt-end" datetime="2013-06-30 18:00">18:00</time>
+                                            at <span class="p-location">location</span>
+                                        </p>
+                                        <p>Not done since... lastDoneStr</p>
+                                        <p class="p-description">vcomponent.description</p>
+                                        <p class="p-category" data-tags="B">B</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
                     </div>
                 </section>
 

@@ -43,4 +43,29 @@ $( document ).ready(function() {
         $( this ).addClass('is-checked');
       });
     });
+
+    $("#challenger-toolbar #challenger-toolbar-btn-mind").click(function() {
+        if($("#challenger-toolbar-mind").hasClass("hide")) {
+            $("#challenger-toolbar #challenger-toolbar-btn-body").removeClass("active");
+            $("#challenger-toolbar-body").addClass("hide");
+
+        }
+        $(this).toggleClass("active");
+        $("#challenger-toolbar-mind").toggleClass("hide");
+    });
+    $("#challenger-toolbar #challenger-toolbar-btn-body").click(function() {
+        if($("#challenger-toolbar-body").hasClass("hide")) {
+            $("#challenger-toolbar #challenger-toolbar-btn-mind").removeClass("active");
+            $("#challenger-toolbar-mind").addClass("hide");
+        }
+        $(this).toggleClass("active");
+        $("#challenger-toolbar-body").toggleClass("hide");
+    });
+/*    $("#challenger-toolbar #challenger-toolbar-btn-pleasure").click(function() {
+        $("#challenger-toolbar #challenger-toolbar-pleasure").toggleClass("hide");
+    });
+    $("#challenger-toolbar #challenger-toolbar-btn-support").click(function() {
+        $("#challenger-toolbar #challenger-toolbar-support").toggleClass("hide");
+    });*/
+
 });

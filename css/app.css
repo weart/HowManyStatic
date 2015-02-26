@@ -11,7 +11,9 @@ html, body {
   overflow: hidden; }
 
 .container-fluid {
-  margin-top: 70px; }
+ /*margin-top: 70px;*/
+  padding: 0;
+}
 
 .navbar > .container > .navbar-header, .navbar > .container-fluid > .navbar-header {
   width: 100%; }
