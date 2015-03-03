@@ -15,7 +15,7 @@ $( document ).ready(function() {
     });
 
     // bind filter button click
-    $('#page-challenger-tags-filter').on( 'click', 'button', function() {
+    /*$('#page-challenger-tags-filter').on( 'click', 'button', function() {
       var filterValue = $( this ).attr('data-filter');
       if(filterValue == 'filterTag') {
           // filter function
@@ -33,6 +33,25 @@ $( document ).ready(function() {
           window.tag = false;
       }
       $container.isotope({ filter: filterValue });
+  });*/
+    $("#challenger-toolbar").on( 'click', 'button', function() {
+        var filterValue = $( this ).attr('data-filter');
+        if(filterValue == 'filterTag') {
+            // filter function
+            window.tag = $( this ).attr('data-filter-tag');
+            filterValue = function(tag) {
+                var tags = $(this).find('.p-category').data('tags').split(";"); //or .attr('data-tags');
+                for (var i = 0, len = tags.length; i < len; i++) {
+                    if(window.tag == tags[i]) {
+                        return true;
+                    }
+                }
+                return false;
+            };
+        } else {
+            window.tag = false;
+        }
+        $container.isotope({ filter: filterValue });
     });
 
     // change is-checked class on buttons
