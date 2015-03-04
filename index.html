@@ -30,6 +30,8 @@
         <link rel="stylesheet" href="css/toolbar.css">
         <link rel="stylesheet" href="css/vcomponent-item.css">
         <link rel="stylesheet" href="css/calendars.css">
+        <link rel="stylesheet" href="css/bootstrap-markdown.min.css">
+
 
     </head>
     <body>
@@ -107,7 +109,7 @@
                 </button>
                 -->
 
-                <section id="page-challenger" class="page col-xs-12 col-md-12">
+                <section id="page-challenger" class="page col-xs-12 col-md-12 hide">
                     <div id="challenger-toolbar" class="row">
                         <div class="col-xs-10 col-xs-offset-1">
                             <div class="btn-group btn-group-justified" role="group">
@@ -247,9 +249,9 @@
                     -->
                     <div class="row">
                         <div id="page-challenger-masonry-container" class="col-xs-9 col-xs-offset-1 col-md-10">
-                            <div class="pull-left vcomponent-item vcomponent-item-high-priority">
+                            <div class="thumbnail pull-left vcomponent-item vcomponent-item-high-priority">
                                 <div class="h-event">
-                                    <img class="p-attached" src="./img/Gimnas.png" />
+                                    <img class="p-attached img-responsive img-rounded" src="./img/Gimnas.png" />
                                     <!--{{!--<div class="aside pull-right">10-10-2014</div>--}}-->
                                     <div class="ribbon">
                                         <!--<i class="fa fa-calendar-o fa-2x pull-left"></i>-->
@@ -604,15 +606,200 @@
                                 http://www.larsko.org/v/euc/
                                 http://bl.ocks.org/nbremer/raw/6506614/
                 -->
-                <section id="page-todo" class="page col-xs-5 hide"><!-- Pot ser de tamany: 5,6,10 i 12 -->
-                    <h1>ToDo</h1><!--Aquí aniran els mateixos vcomponent-item que al challenger-->
+                <section id="page-todo" class="page col-md-5 well"><!-- Pot ser de tamany: 5,6,10 i 12 -->
+
+                    <div class="row"><h2 id="title-toDo" class="text-center">ToDo</h2></div>
+                    <!--Aquí aniran els mateixos vcomponent-item que al challenger-->
+                    <div class="thumbnail pull-left vcomponent-item vcomponent-item-high-priority">
+                        <div class="h-event">
+                            <div class="img-container rounded">
+                                <img class="p-attached img-responsive img-rounded" src="./img/Dan.jpg" alt="partit">
+                            </div>
+                            <div class="caption">
+                                <h4 class="text-center p-summary">Visitar al Dan</h4>
+                                <p class="thumbnail green-label col-md-12"><strong>Last done:</strong><span class="dt-last-done"> 2 months</span></p>
+                                <p class="thumbnail orange-label col-md-12"><strong>Streak:</strong><span class="p-recurrence"> none</span></p>
+                                <p class="thumbnail blue-label col-md-12">
+                                    <strong>Tags:</strong><span class="p-tags"> #BCN #Friends #Projecte</span>
+                                </p>
+                                <div class="toolbar-tools">
+                                    <button class="col-md-3" type="button">
+                                        <span class="glyphicon glyphicon-cog"></span>
+                                    </button>
+                                    <button class="col-md-4 col-md-offset-1" type="button">
+                                        <span class="glyphicon glyphicon-move"></span>
+                                    </button>
+                                    <button class="col-md-3 col-md-offset-1" type="button">
+                                        <span class="glyphicon glyphicon-resize-full"></span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="thumbnail pull-left vcomponent-item vcomponent-item-high-priority">
+                        <div class="h-event">
+                            <div class="img-container rounded">
+                                <img class="p-attached img-responsive img-rounded" src="./img/messi.jpg" alt="partit">
+                            </div>
+                            <div class="caption">
+                                <h4 class="text-center p-summary">20:45 Bar&ccedil;a - Madrid</h4>
+                                <p class="thumbnail green-label col-md-12"><strong>Last done:</strong><span class="dt-last-done"> 4 months</span></p>
+                                <p class="thumbnail orange-label col-md-12"><strong>Streak:</strong><span class="p-recurrence"> 1 day</span></p>
+                                <p class="thumbnail blue-label col-md-12">
+                                    <strong>Tags:</strong><span class="p-tags"> #BCN #Birres #Bar&ccedil;a</span>
+                                </p>
+                                <div class="toolbar-tools">
+                                    <button class="col-md-3" type="button">
+                                        <span class="glyphicon glyphicon-cog"></span>
+                                    </button>
+                                    <button class="col-md-4 col-md-offset-1" type="button">
+                                        <span class="glyphicon glyphicon-move"></span>
+                                    </button>
+                                    <button class="col-md-3 col-md-offset-1" type="button">
+                                        <span class="glyphicon glyphicon-resize-full"></span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="thumbnail pull-left vcomponent-item vcomponent-item-high-priority">
+                        <div class="h-event">
+                            <div class="img-container rounded">
+                                <img class="p-attached img-responsive img-rounded" src="./img/local.jpg" alt="Local">
+                            </div>
+                            <div class="caption">
+                                <h4 class="text-center p-summary">Anar al local</h4>
+                                <p class="thumbnail green-label col-md-12"><strong>Last done:</strong><span class="dt-last-done"> 1 day</span></p>
+                                <p class="thumbnail orange-label col-md-12"><strong>Streak:</strong><span class="p-recurrence"> 2 days</span></p>
+                                <p class="thumbnail blue-label col-md-12">
+                                    <strong>Tags:</strong><span class="p-tags"> #Prospe #Local #Pros</span>
+                                </p>
+                                <div class="toolbar-tools">
+                                    <button class="col-md-3" type="button">
+                                        <span class="glyphicon glyphicon-cog"></span>
+                                    </button>
+                                    <button class="col-md-4 col-md-offset-1" type="button">
+                                        <span class="glyphicon glyphicon-move"></span>
+                                    </button>
+                                    <button class="col-md-3 col-md-offset-1" type="button">
+                                        <span class="glyphicon glyphicon-resize-full"></span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="thumbnail pull-left vcomponent-item vcomponent-item-low-priority">
+                        <div class="h-event">
+                            <div class="caption">
+                                <h4 class="text-center p-summary"><i class="fa fa-male"></i> Anar a passejar</h4>
+                                <p class="thumbnail green-label col-md-12"><strong>Last done:</strong><span class="dt-last-done"> 1 day</span></p>
+                                <p class="thumbnail orange-label col-md-12"><strong>Streak:</strong><span class="p-recurrence"> 0 days</span></p>
+                                <p class="thumbnail blue-label col-md-12">
+                                    <strong>Tags:</strong><span class="p-tags"> #Fasten #Dinner #Friends</span>
+                                </p>
+                                <div class="toolbar-tools">
+                                    <button class="col-md-3" type="button">
+                                        <span class="glyphicon glyphicon-cog"></span>
+                                    </button>
+                                    <button class="col-md-4 col-md-offset-1" type="button">
+                                        <span class="glyphicon glyphicon-move"></span>
+                                    </button>
+                                    <button class="col-md-3 col-md-offset-1" type="button">
+                                        <span class="glyphicon glyphicon-resize-full"></span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </section>
 
-                <section id="page-events" class="page col-xs-5 hide"><!-- Pot ser de tamany: 5,6,10 i 12 -->
-                    <h1>Daily / Weekly / Monthly</h1><!-- toolbar like challenger -->
+                <section id="page-events" class="page col-md-5 well"><!-- Pot ser de tamany: 5,6,10 i 12 -->
+                    <!--<h1>Daily / Weekly / Monthly</h1><!-- toolbar like challenger -->
+
+                    <div class="btn-group col-md-12" role="group" aria-label="...">
+                        <button type="button" class="btn btn-default col-md-4">Daily</button>
+                        <button type="button" class="btn btn-default col-md-4">Weekly</button>
+                        <button type="button" class="btn btn-default col-md-4">Monthly</button>
+                    </div>
+                    <div class="btn-group col-md-12" role="group" aria-label="...">
+                        <button type="button" class="btn btn-default col-md-3">Day</button>
+                        <button type="button" class="btn btn-default col-md-3">Week</button>
+                        <button type="button" class="btn btn-default col-md-3">Month</button>
+                        <button type="button" class="btn btn-default col-md-3">Year</button>
+                        <br>
+                    </div>
+                    <div class="row empty-row">
+                        <div class="col-md-12"></div>
+                    </div>
+                    <form class="col-md-8">
+                        <!--<input name="title" type="text" placeholder="Title?"></input><br>-->
+                        <textarea name="content" data-provide="markdown" rows="10"></textarea>
+                        <button type="submit" class="btn btn-submit col-md-3 pull-right">Submit</button>
+                    </form>
+                    <ul class="col-md-4 list-unstyled">
+                        <li>Overwall</li>
+                        <li>Mind</li>
+                        <li>Body</li>
+                        <li>Pleasure</li>
+                        <li>Support</li>
+                    </ul>
+
+                    <div class="thumbnail pull-left vcomponent-item vcomponent-item-high-priority">
+                        <div class="h-event">
+                            <div class="img-container rounded">
+                                <img class="p-attached img-responsive img-rounded" src="./img/Fasten.jpg" alt="Local">
+                            </div>
+                            <div class="caption">
+                                <h4 class="text-center p-summary">Sopar Fasten</h4>
+                                <p class="thumbnail green-label col-md-12"><strong>Last done:</strong><span class="dt-last-done"> 1 day</span></p>
+                                <p class="thumbnail orange-label col-md-12"><strong>Streak:</strong><span class="p-recurrence"> 0 days</span></p>
+                                <p class="thumbnail blue-label col-md-12">
+                                    <strong>Tags:</strong><span class="p-tags"> #Fasten #Dinner #Friends</span>
+                                </p>
+                                <div class="toolbar-tools">
+                                    <button class="col-md-3" type="button">
+                                        <span class="glyphicon glyphicon-cog"></span>
+                                    </button>
+                                    <button class="col-md-4 col-md-offset-1" type="button">
+                                        <span class="glyphicon glyphicon-move"></span>
+                                    </button>
+                                    <button class="col-md-3 col-md-offset-1" type="button">
+                                        <span class="glyphicon glyphicon-resize-full"></span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="thumbnail pull-left vcomponent-item vcomponent-item-medium-priority">
+                        <div class="h-event">
+                            <div class="img-container rounded col-md-6">
+                                <img class="p-attached thumbnail img-responsive img-rounded" src="./img/carritus.jpg" alt="Local">
+                            </div>
+                            <h4 class="caption p-summary col-md-6">Carritus</h4>
+                            <div class="caption col-md-6">09:30-11:00<br>13:30-15:00<br></div>
+                            <div class="caption">
+                                <p class="thumbnail green-label col-md-12"><strong>Last done:</strong><span class="dt-last-done"> 1 day</span></p>
+                                <p class="thumbnail orange-label col-md-12"><strong>Streak:</strong><span class="p-recurrence"> 0 days</span></p>
+                                <p class="thumbnail blue-label col-md-12">
+                                    <strong>Tags:</strong><span class="p-tags"> #Fasten #Dinner #Friends</span>
+                                </p>
+                                <div class="toolbar-tools">
+                                    <button class="col-md-3" type="button">
+                                        <span class="glyphicon glyphicon-cog"></span>
+                                    </button>
+                                    <button class="col-md-4 col-md-offset-1" type="button">
+                                        <span class="glyphicon glyphicon-move"></span>
+                                    </button>
+                                    <button class="col-md-3 col-md-offset-1" type="button">
+                                        <span class="glyphicon glyphicon-resize-full"></span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </section>
 
-                <aside id="page-filters" class="ember-view page col-xs-2 hide">
+                <aside id="page-filters" class="ember-view page col-md-2">
                     <h1>Filters</h1>
                 </aside>
 
@@ -658,6 +845,7 @@
         <script src="js/vendor/velocity/velocity.min.js"></script>
         <script src="js/vendor/metafizzy/masonry.pkgd.min.js"></script>
         <script src="js/vendor/metafizzy/isotope.pkgd.min.js"></script>
+        <script src="js/vendor/bootstrap-markdown.js"></script>
 
         <!--<script src="js/plugins.js"></script>-->
         <script src="js/main.js"></script>

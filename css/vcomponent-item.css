@@ -144,7 +144,11 @@
 .vcomponent-item.vcomponent-item-low-priority .extended {
     display: none;
 }
-@media screen and (max-width: 600px) {
+
+.vcomponent-item .dt-last-done{
+
+}
+@media screen and (min-width: 0px) {
     .vcomponent-item.vcomponent-item-high-priority,
     .vcomponent-item.vcomponent-item-medium-priority,
     .vcomponent-item.vcomponent-item-low-priority {
@@ -166,3 +170,40 @@
         bottom: 100px;
     }
 }
+@media screen and (min-width: 768px) {
+    .vcomponent-item.vcomponent-item-high-priority{
+        width:  253px;
+        height: 300px;
+        margin: 4px;
+    }
+    .vcomponent-item.vcomponent-item-medium-priority{
+        width:  253px;
+        height: 250px;
+        margin: 4px;
+    }
+    .vcomponent-item.vcomponent-item-low-priority{
+        width:  253px;
+        height: 177px;
+        margin: 4px;
+    }
+    .vcomponent-item.vcomponent-item-medium-priority > .h-event >.img-container {
+        width: 50%;
+        max-height: 127px;
+        overflow: hidden;
+        border-radius: 5px;
+    }
+
+    .vcomponent-item.vcomponent-item-high-priority > .h-event .img-container{
+        width: 100%;
+        max-height: 127px;
+        overflow: hidden;
+        border-radius: 5px;
+    }
+    .vcomponent-item .h-event .img-container img {
+        width: 100%;
+    }
+    .vcomponent-item .p-summary{
+        margin-top: 0px;
+    }
+}
+
