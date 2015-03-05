@@ -123,3 +123,27 @@ form.well{
     left: 115px;
     bottom: 33px;
 }
+.frame-selection{
+    width: 100%;
+    border: 1px solid #fff;
+}
+.frame{
+    padding: 19px;
+    /*margin-bottom: 20px;*/
+   /* border: 1px solid #dcdcdc;*/
+}
+.title-filters{
+    position: relative;
+    top: 10px;
+    background-color: #fdc162;
+    z-index: 1;
+}
+.calendar-selection > button > i > span{
+    font-family: 'Helvetica';
+}
+.calendar-selection > button{
+    background-color: transparent;
+}
+.filter-search{
+    padding-bottom: 0px;
+}

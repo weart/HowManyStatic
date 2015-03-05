@@ -80,6 +80,12 @@ $( document ).ready(function() {
         $(this).toggleClass("active");
         $("#challenger-toolbar-body").toggleClass("hide");
     });
+     $(".diary-button").click(function() {
+        if($(".list-unstyled").hasClass("hide")) {
+            $(".list-unstyled").removeClass("hide");
+            $("form").removeClass("hide");
+        }
+    });
 /*    $("#challenger-toolbar #challenger-toolbar-btn-pleasure").click(function() {
         $("#challenger-toolbar #challenger-toolbar-pleasure").toggleClass("hide");
     });

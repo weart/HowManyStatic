@@ -92,7 +92,9 @@
   /*	left: 66.66666667%;*/
   /*	width: 20%;
     left: 80%;*/ }
-
+#page-filters >.well {
+    background-image: transparent;
+}
 .page#page-charts {
   background: #fd6a62;
   /*	left: 20%;
