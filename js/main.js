@@ -1,7 +1,4 @@
 $( document ).ready(function() {
-/****************\
- * CHALLENGER   *
-\****************/
     // initialize masonry (done)
 //    $('#page-challenger-masonry-container').masonry({
 //      columnWidth: 200,
@@ -9,7 +6,7 @@ $( document ).ready(function() {
 //    });
 
     // initialize Isotope
-    var $containerChallenger = $('#page-challenger-masonry-container').isotope({
+    var $container = $('#page-challenger-masonry-container').isotope({
       itemSelector: '.vcomponent-item',
       // initialize Masonry
       masonry: {
@@ -58,13 +55,13 @@ $( document ).ready(function() {
     });
 
     // change is-checked class on buttons
-//  $('.button-group').each( function( i, buttonGroup ) {
-//      var $buttonGroup = $( buttonGroup );
-//      $buttonGroup.on( 'click', 'button', function() {
-//          $buttonGroup.find('.is-checked').removeClass('is-checked');
-//          $( this ).addClass('is-checked');
-//      });
-//  });
+    $('.button-group').each( function( i, buttonGroup ) {
+      var $buttonGroup = $( buttonGroup );
+      $buttonGroup.on( 'click', 'button', function() {
+        $buttonGroup.find('.is-checked').removeClass('is-checked');
+        $( this ).addClass('is-checked');
+      });
+    });
 
     $("#challenger-toolbar #challenger-toolbar-btn-mind").click(function() {
         if($("#challenger-toolbar-mind").hasClass("hide")) {
@@ -96,23 +93,4 @@ $( document ).ready(function() {
         $("#challenger-toolbar #challenger-toolbar-support").toggleClass("hide");
     });*/
 
-
-
-/****************\
- * CALENDAR     *
-\****************/
-    var $container = $('#page-todo-packery-container').packery({
-        columnWidth: 80,
-        rowHeight: 80
-    });
-
-    $container.find('.vcomponent-item').each( function( i, itemElem ) {
-        // make element draggable with Draggabilly
-        var draggie = new Draggabilly( itemElem, {
-            containment: '#page-todo-packery-container',
-            handle: '.glyphicon-move'
-        } );
-        // bind Draggabilly events to Packery
-        $container.packery( 'bindDraggabillyEvents', draggie );
-    });
 });
