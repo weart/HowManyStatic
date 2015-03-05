@@ -8,7 +8,7 @@ html, body {
   padding: 0;
   color: white;
   background: #0ac2d2;
-  overflow: scroll; }
+  overflow: hidden; }
 
 .container-fluid {
  /*margin-top: 70px;*/
