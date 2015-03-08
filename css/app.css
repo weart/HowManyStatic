@@ -147,3 +147,7 @@ form.well{
 .filter-search{
     padding-bottom: 0px;
 }
+.ToDo-small-device{
+    font-size: 12px;
+    padding-right: 0px;
+}

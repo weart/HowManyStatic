@@ -611,21 +611,28 @@
                     <div class="row"><h2 id="title-toDo" class="text-center">ToDo</h2></div>
                     <!--Aquí aniran els mateixos vcomponent-item que al challenger-->
                     <div class="row">
-                        <div id="page-todo-packery-container" class="col-xs-12">
+                        <div id="page-todo-packery-container" class="col-xs-11 col-md-12">
 
                             <div class="thumbnail pull-left vcomponent-item vcomponent-item-high-priority">
                                 <div class="h-event">
-                                    <div class="img-container rounded">
+                                    <div class="img-container rounded hidden-xs col-md-12">
                                         <img class="p-attached img-responsive img-rounded" src="./img/Dan.jpg" alt="partit">
                                     </div>
-                                    <div class="caption">
-                                        <h4 class="text-center p-summary">Visitar al Dan</h4>
-                                        <p class="thumbnail green-label col-md-12 pull-left"><strong>Last done:</strong><span class="dt-last-done pull-right"> 2 months</span></p>
-                                        <p class="thumbnail orange-label col-md-12 pull-left"><strong>Streak:</strong><span class="p-recurrence pull-right"> none</span></p>
-                                        <p class="thumbnail blue-label col-md-12">
+                                    <div class="caption col-xs-12 col-md-12">
+                                        <div class="visible-xs col-xs-1"><span class="glyphicon glyphicon-ice-lolly-tasted"></span></div>
+                                        <h4 class="text-center p-summary col-xs-8 col-md-12"><strong>Visitar al Dan</strong></h4>
+                                        <div class="ToDo-small-device col-xs-10 visible-xs">
+                                            <p class="p-description">Toca parlar de que es far&agrave; d&#39;aqu&iacute; al 31 de Desembre</span></p>
+                                            <div class="thumbnail col-xs-5 green-label pull-left">LD:<span class="dt-last-done"> 2 days</span></div>
+                                            <div class="thumbnail col-xs-5 orange-label col-xs-offset-1 pull-right">Streak:<span class="p-recurrence"> 1 day</span></div></div>
+                                        <p class="thumbnail green-label col-md-12 pull-left hidden-xs">
+                                            <strong>Last done:</strong><span class="dt-last-done pull-right"> 2 months</span></p>
+                                        <p class="thumbnail orange-label col-md-12 pull-left hidden-xs">
+                                            <strong>Streak:</strong><span class="p-recurrence pull-right"> none</span></p>
+                                        <p class="thumbnail blue-label col-md-12 hidden-xs">
                                             <strong>Tags:</strong><span class="p-tags"> #BCN #Friends #Projecte</span>
                                         </p>
-                                        <div class="toolbar-tools">
+                                        <div class="toolbar-tools hidden-xs">
                                             <button class="col-md-3" type="button">
                                                 <span class="glyphicon glyphicon-cog"></span>
                                             </button>
@@ -641,10 +648,10 @@
                             </div>
                             <div class="thumbnail pull-left vcomponent-item vcomponent-item-high-priority">
                                 <div class="h-event">
-                                    <div class="img-container rounded">
+                                    <div class="img-container rounded col-xs-3 col-md-12">
                                         <img class="p-attached img-responsive img-rounded" src="./img/messi.jpg" alt="partit">
                                     </div>
-                                    <div class="caption">
+                                    <div class="caption col-xs-7 col-md-12">
                                         <h4 class="text-center p-summary">20:45 Bar&ccedil;a - Madrid</h4>
                                         <p class="thumbnail green-label col-md-12 pull-left"><strong>Last done:</strong><span class="dt-last-done pull-right"> 4 months</span></p>
                                         <p class="thumbnail orange-label col-md-12 pull-left"><strong>Streak:</strong><span class="p-recurrence pull-right"> 1 day</span></p>
@@ -667,10 +674,10 @@
                             </div>
                             <div class="thumbnail pull-left vcomponent-item vcomponent-item-high-priority">
                                 <div class="h-event">
-                                    <div class="img-container rounded">
+                                    <div class="img-container rounded col-xs-3 col-md-12">
                                         <img class="p-attached img-responsive img-rounded" src="./img/local.jpg" alt="Local">
                                     </div>
-                                    <div class="caption">
+                                    <div class="caption col-xs-7 col-md-12">
                                         <h4 class="text-center p-summary">Anar al local</h4>
                                         <p class="thumbnail green-label col-md-12 pull-left"><strong>Last done:</strong><span class="dt-last-done pull-right"> 1 day</span></p>
                                         <p class="thumbnail orange-label col-md-12 pull-left"><strong>Streak:</strong><span class="p-recurrence pull-right"> 2 days</span></p>
@@ -755,7 +762,7 @@
                         </ul>
                     </div>
                     <div class="row">
-                        <div id="page-events-container" class="col-xs-12">
+                        <div id="page-events-container" class="col-md-12">
                             <div class="thumbnail pull-left vcomponent-item vcomponent-item-high-priority">
                                 <div class="h-event">
                                     <div class="img-container rounded">
@@ -812,10 +819,9 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
                 </section>
 
-                <aside id="page-filters" class="ember-view page col-md-2 pull-right">
+                <aside id="page-filters" class="ember-view page col-md-2">
                     <div class="col-md-12 filter-search frame">
                         <div class="input-group">
                             <input type="text" class="form-control" placeholder="Search for...">
@@ -891,7 +897,7 @@
                     </div>
                 </aside>
 
-                <section id="page-charts" class="ember-view page col-xs-10 hide">
+                <section id="page-charts" class="ember-view page col-md-10 hide">
                     <h1>Charts: Bars, History & Pie</h1>
                 </section>
 
