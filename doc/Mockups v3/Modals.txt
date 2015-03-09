@@ -1,0 +1,23 @@
+			Modals:
+
+New vcomponent (Everywhere):
+	doc/Mockups%20v2/HowManyDist_v1/index.html#/calendars/vggf9/todo/8qjj6/edit
+
+Add challenge (Challenger):
+	click credits
+
+View to do (Calendar/Todo):
+	doc/Mockups%20v2/4.%20HowMany%20ToDoView.png
+
+View event (Calendar/events):
+	doc/Mockups%20v2/5.%20HowMany%20EventView.png
+
+Edit event & to do (Calendar):
+	doc/Mockups%20v2/HowManyDist_v1/index.html#/calendars/vggf9/todo/8qjj6/edit
+
+Add / Edit calendar (Filters):
+	-
+
+			Other pages:
+Configuration
+About / Help

@@ -71,6 +71,10 @@
     padding: 0px;
 }
 
+.page#page-challenger-modal {
+    background: #0A68D2;
+    padding: 0px;
+}
 
 .page#page-todo {
   background: #7bb7fa;
