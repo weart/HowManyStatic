@@ -3,9 +3,49 @@ $( document ).ready(function() {
 /****************\
  * NAVBAR       *
 \****************/
+	window.calendar_view_step = 1;
     $(".goToCalendars").click(function() {
         $("#page-challenger,#page-challenger-modal,#page-charts").addClass("hide");
         $("#page-todo,#page-events,#page-filters").removeClass("hide");
+
+		window.calendar_view_step++;
+//		console.log(window.calendar_view_step);
+		switch(window.calendar_view_step) {
+			case 1:
+				$("#page-todo").attr("class","page col-md-5");
+				$("#page-events").attr("class","page col-md-5");
+				$("#page-filters").attr("class","page col-md-2");
+				break;
+			case 2:
+				$("#page-todo").attr("class","page col-md-10");
+				$("#page-events").attr("class","page hide");
+				$("#page-filters").attr("class","page col-md-2");
+				break;
+			case 3:
+				$("#page-todo").attr("class","page col-md-12");
+				$("#page-events").attr("class","page hide");
+				$("#page-filters").attr("class","page hide");
+				break;
+			case 4:
+				$("#page-todo").attr("class","page col-md-6");
+				$("#page-events").attr("class","page col-md-6");
+				$("#page-filters").attr("class","page hide");
+				break;
+			case 5:
+				$("#page-todo").attr("class","page hide");
+				$("#page-events").attr("class","page col-md-10");
+				$("#page-filters").attr("class","page col-md-2");
+				break;
+			case 6:
+				$("#page-todo").attr("class","page hide");
+				$("#page-events").attr("class","page col-md-12");
+				$("#page-filters").attr("class","page hide");
+				break;
+			default:
+				window.calendar_view_step = 0;
+//				console.log('Reboot step');
+				$(".goToCalendars").click();
+		}
     });
 
     $(".goToChallenger").click(function() {
@@ -13,11 +53,15 @@ $( document ).ready(function() {
         $("#page-challenger").removeClass("hide");
     });
 
-    $(".goToChallengerModal").click(function() {
+    $(".goToChallengerModal, #page-challenger-masonry-container .vcomponent-item").click(function() {
         $("#page-challenger,#page-todo,#page-events,#page-filters,#page-charts").addClass("hide");
         $("#page-challenger-modal").removeClass("hide");
     });
 
+    $(".goToCharts").click(function() {
+        $("#page-challenger,#page-todo,#page-events,#page-challenger-modal").addClass("hide");
+        $("#page-filters,#page-charts").removeClass("hide");
+    });
 
 
 
@@ -195,7 +239,25 @@ page-challenger-modal
     });
 
     $("#page-events .diary-button").click(function() {
-        $("#page-events-diary").toggleClass("hide");
         $(this).toggleClass("active");
+        $("#page-events-diary").toggleClass("hide");
+    });
+
+    $("#page-events .page-events-daily-btn").click(function() {
+        $(this).toggleClass("active");
+        $("#page-events #page-events-diary, #page-events #page-events-weekly, #page-events #page-events-monthly").addClass("hide");
+		$("#page-events #page-events-daily").removeClass("hide");
+    });
+
+    $("#page-events .page-events-weekly-btn").click(function() {
+        $(this).toggleClass("active");
+        $("#page-events #page-events-diary, #page-events #page-events-daily, #page-events #page-events-monthly").addClass("hide");
+		$("#page-events #page-events-weekly").removeClass("hide");
+    });
+
+    $("#page-events .page-events-monthly-btn").click(function() {
+        $(this).toggleClass("active");
+        $("#page-events #page-events-diary, #page-events #page-events-weekly, #page-events #page-events-daily").addClass("hide");
+		$("#page-events #page-events-monthly").removeClass("hide");
     });
 });
