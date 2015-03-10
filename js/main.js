@@ -244,19 +244,25 @@ page-challenger-modal
     });
 
     $("#page-events .page-events-daily-btn").click(function() {
-        $(this).toggleClass("active");
+		$("#page-events .diary-button").removeClass("hide");
+		$("#page-events .page-events-weekly-btn,#page-events .page-events-monthly-btn").removeClass("active");
+        $(this).addClass("active");
         $("#page-events #page-events-diary, #page-events #page-events-weekly, #page-events #page-events-monthly").addClass("hide");
 		$("#page-events #page-events-daily").removeClass("hide");
     });
 
     $("#page-events .page-events-weekly-btn").click(function() {
-        $(this).toggleClass("active");
+		$("#page-events .diary-button").addClass("hide");
+		$("#page-events .page-events-daily-btn,#page-events .page-events-monthly-btn").removeClass("active");
+        $(this).addClass("active");
         $("#page-events #page-events-diary, #page-events #page-events-daily, #page-events #page-events-monthly").addClass("hide");
 		$("#page-events #page-events-weekly").removeClass("hide");
     });
 
     $("#page-events .page-events-monthly-btn").click(function() {
-        $(this).toggleClass("active");
+		$("#page-events .diary-button").addClass("hide");
+		$("#page-events .page-events-weekly-btn,#page-events .page-events-daily-btn").removeClass("active");
+        $(this).addClass("active");
         $("#page-events #page-events-diary, #page-events #page-events-weekly, #page-events #page-events-daily").addClass("hide");
 		$("#page-events #page-events-monthly").removeClass("hide");
     });
