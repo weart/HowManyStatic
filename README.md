@@ -1,167 +1,75 @@
-# How Many Days #
-How Many Days have been since I did... ~ How many days have passed since I did...
+# [![Web Starter Kit](https://cloud.githubusercontent.com/assets/170270/3343034/ceef6e92-f899-11e3-96b9-5d9d69d97a00.png)](https://github.com/google/web-starter-kit/releases/latest)
 
-## The Application ##
-A la recerca de possibles necessitats,
- i les seves solucions respectives, m'he dit...
+## Overview
 
-Quan fa que no rego les plantes?
-Quants dies fa que no visito l'àvia?
-Quants dies fa que no llegeixo?
-Quants mesos fa que no faig una escapada?
+[Web Starter Kit](https://developers.google.com/web/starter-kit) is an opinionated boilerplate for web development. Tools for building a great experience [across many devices](https://google.github.io/web-starter-kit/hello-world/) and [performance oriented](#web-performance). Helping you to stay productive following the best practices outlined in Google's [Web Fundamentals](https://developers.google.com/web/fundamentals). A solid starting point for both professionals and newcomers to the industry.
 
-### [Try It Here(Not Yet)](http://github.com) ###
+[![](https://cloud.githubusercontent.com/assets/170270/3343033/ceee251e-f899-11e3-9dd9-e313cf2522ec.png)](https://developers.google.com/web/starter-kit/ 'Features')
 
-### Installation (using [ember-cli](http://www.ember-cli.com/)) ###
-```bash
-npm install -g ember-cli
-npm install -g bower
-npm install -g phantomjs
-npm install
-bower install
-```
+## Quickstart
 
-### Run ###
-```bash
-grunt server
-```
+[Download](https://github.com/google/web-starter-kit/releases/latest) the kit or clone this repository and build on what is included in the `app` directory.
 
-### Build ###
-```bash
-ember build
-```
+There are two HTML starting points, from which you can choose:
 
-### Build & Preview ###
-```bash
-ember s
-```
+- `index.html` - (IE10+) the default starting point, containing layout and a slide-out menu
+- `basic.html` - (IE8+) no layout, but still includes our minimal mobile best-practices
 
+Be sure to look over the [installation docs](docs/install.md) to verify your environment is prepared to run WSK.
+Once you have verified that your system can run WSK, check out the [commands](docs/commands.md) available to get started.
 
-## Software used ##
-1. [ember.js](http://emberjs.com/) - A framework for creating ambitious web applications.
-2. [handlebars](http://handlebarsjs.com/) - Semantic Templates compatible with Mustache.
-3. [jQuery](http://jquery.com/) - Cross-browser compatibility for DOM manipulation, ajax...
-4. [ember-cli/ember-cli](https://github.com/ember-cli/ember-cli) - An ember command line utility.
-5. [emberjs/ember-data](https://github.com/emberjs/data) - A data persistence library for Ember.js.
-6. [rpflorence/ember-localstorage-adapter](https://github.com/rpflorence/ember-localstorage-adapter) - Name says it all.
-7. [jamesarosen/ember-i18n](https://github.com/jamesarosen/ember-i18n) - Internationalization for Ember.
-8. [ember-addons/bootstrap-for-ember](https://github.com/ember-addons/bootstrap-for-ember) - Bootstrap for Ember.js.
-9. [dockyard/ember-validations](https://github.com/dockyard/ember-validations) - Validations for Ember Objects.
-10. [dockyard/ember-easyForm](https://github.com/dockyard/ember-easyForm) - Easily build semantic forms in Ember.
-11. [mozilla-comm/ical.js](https://github.com/mozilla-comm/ical.js) - Javascript parser for ics files (rfc5545).
-12. [Moment.js](http://momentjs.com/) - Library for parsing, validating, manipulating, and formatting dates.
-13. [Twitter Bootstrap](http://getbootstrap.com/2.3.2/) - Front-end framework.
-  1. [GLYPHICONS Halflings](http://glyphicons.com/) - Monochromatic icons and symbols part of Bootstrap from Twitter.
-15. [FortAwesome/Font-Awesome](https://github.com/FortAwesome/Font-Awesome/) - The iconic font and CSS framework [http://fontawesome.io](http://fontawesome.io).
-16. [andrewreedy/ember-dc](https://github.com/andrewreedy/ember-dc) - Multi-Dimensional charting built to work natively with crossfilter rendered with d3.js & dc.js, [http://andrewreedy.github.io/ember-dc](http://andrewreedy.github.io/ember-dc), [api](https://github.com/dc-js/dc.js/blob/master/web/docs/api-latest.md).
-  1. [dc.js](https://github.com/dc-js/dc.js) - Dimensional charting built to work natively with crossfilter rendered using d3.js [http://dc-js.github.io/dc.js/](http://dc-js.github.io/dc.js/)
-  2. [Crossfilter](https://github.com/square/crossfilter) - Fast Multidimensional Filtering for Coordinated Views, [http://square.github.io/crossfilter/](http://square.github.io/crossfilter/) , [api](https://github.com/square/crossfilter/wiki/API-Reference), [tutorial](http://www.codeproject.com/Articles/697043/Making-Dashboards-with-Dc-js-Part-2-Graphing).
-  3. [d3js](http://d3js.org/) - Library for manipulating documents based on data.
-17. [@craigbuckler/calendar-icon](http://www.sitepoint.com/create-calendar-icon-html5-css3/) - A Scalable Calendar Icon in HTML5 and CSS3, [demo](http://cssdeck.com/labs/calendar-icon).
-18. [Thibaut Courouble](http://thibaut.me/)/[Month Picker](http://www.cssflow.com/snippets/month-picker) & [Notepad](http://www.cssflow.com/snippets/notepad) - From CSSFlow, [demo month-picker](http://www.cssflow.com/snippets/month-picker/demo), [demo notepad](http://www.cssflow.com/snippets/notepad/demo).
-19. [Tympanus](http://tympanus.net/codrops/about/)/[Moleskine Notebook with jQuery Booklet](http://tympanus.net/codrops/2010/12/14/moleskine-notebook/) - [demo](http://tympanus.net/Tutorials/MoleskineNotebook/), [insipred in My Moleskine](http://dennern.deviantart.com/art/My-Moleskine-79177093), use [jQuery Booklet Plugin](http://builtbywill.com/code/booklet/demos/)
+## Web Performance
 
+Web Starter Kit strives to give you a high performance starting point out of the box and we actively work on delivering the best [PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/) score and frame-rate possible.
 
-### Not used directly, but an important source of inspiration or used in previous versions ###
-1. [Backbone](https://github.com/documentcloud/backbone) - MVC for browser
-2. [Underscore](https://github.com/documentcloud/underscore) - JS Utils
-3. [vinkaga/node-backbone](https://github.com/vinkaga/node-backbone) - Backbone starter kit
-4. [ccoenraets/backbone-jax-cellar](https://github.com/ccoenraets/backbone-jax-cellar) - Backbone starter kit
-5. [jo/backbone-pouch](https://github.com/jo/backbone-pouch) - Backbone PouchDB Adapter (original idea)
-6. [diaspora](https://github.com/diaspora/diaspora) - Distributed and contextual social networking
-7. [vmx/couchappspora](https://github.com/vmx/couchappspora) - diaspora... as a couchapp
-8. [express](http://expressjs.com/) - Web application framework for node
-9. [locomotive](http://expressjs.com/) - Powerful MVC web framework for Node.js
-10. [persvr/perstore](https://github.com/persvr/perstore) - Object store interface for mapping persistent objects to various different storage mediums
-11. [jQuery Mobile](http://jquerymobile.com/) - [ListViews](http://demos.jquerymobile.com/1.4.0/listview-grid/listview-grid.html)([jsfiddle](http://jsfiddle.net/Shreerang/ggzHT/)) & [Panels](http://demos.jquerymobile.com/1.4.2/panel/)
-12. [RequireJS](http://requirejs.org/) - JavaScript modular script loader
-13. [Require-css](https://github.com/guybedford/require-css) - CSS loader plugin for RequireJS
-14. [RequireJS-plugins](https://github.com/millermedeiros/requirejs-plugins) - Small set of plugins for RequireJS
-15. [fernandogmar/Emberjs-RequireJS](https://github.com/fernandogmar/Emberjs-RequireJS) - Starter kit for EmberJS using RequireJS
-16. [dgeb/grunt-ember-templates](https://github.com/dgeb/grunt-ember-templates) - Precompile Handlebars templates for Ember.js
-17. [emberjs-addons/ember-bootstrap](https://github.com/emberjs-addons/ember-bootstrap) - A set of UI elements styled using the Boostrap toolkit to use with Ember.js
-18. [Raphaël](http://raphaeljs.com/) - Library that should simplify your work with vector graphics on the web
-19. [CrowdStrike/ember-timetree](https://github.com/CrowdStrike/ember-timetree) - Visualize hierarchical timeline data. Built with Ember.js and D3.js
-20. [StoicLoofah/chronoline.js](https://github.com/StoicLoofah/chronoline.js) - Library for making a chronology timeline out of events on a horizontal timescale
-21. [ember-addons/ember-forms](https://github.com/ember-addons/ember-forms) - Smart, Intuitive forms for Ember.js styled with Bootstrap & Validation ready.
-22. d3js & Emberjs, examples & tutorials:
-  1. [vpham21/snack](https://github.com/vpham21/snack) - [Snack Dashboard Demo](http://jeroenooms.github.io/dashboard/snack/)
-  2. [addepar/ember-charts](https://github.com/addepar/ember-charts) - A beautiful and easily extensible chart suite built with D3.js and Ember.js [http://addepar.github.io](http://addepar.github.io/#/ember-charts/overview).
-  3. [samselikoff/talks](https://github.com/samselikoff/talks) - Ember and D3: Building a simple dashboard.
-  4. [front-back.com/an-ember-js-gauge-component](http://front-back.com/an-ember-js-gauge-component) - An Ember JS Gauge Component
-23. [kurakin/node-vcal](https://github.com/kurakin/node-vcal) - Create and parse ics files
-24. [stefanpenner/ember-app-kit](http://iamstef.net/ember-app-kit/) - Starting point for "ambitious web applications"
+In terms of CSS, opting to just use the minimal layout (main.css, h5bp.css) weighs in at ~7KB before modifications are made. Opting to use the Style Guide styles (the default) will take this up to ~39KB. It is your choice which path makes the most sense for your project, however notes on excluding Style Guide styles are in our gulpfile.
 
+## Browser Support
 
-# Thank you so much to all this Open Source projects!!
+At present, we officially aim to support the following browsers:
 
+* IE9, IE10, IE11, IE Mobile 10
+* FF 30, 31
+* Chrome 34, 35
+* Safari 7, 8
+* Opera 23, 24
+* iOS Safari 7, 8
+* Opera Coast
+* Android / Chrome 4.4, 4.4.3
+* BlackBerry 10
 
-## License ##
-The project is licensed under the [GNU Affero GPL v3](http://www.gnu.org/licenses/agpl-3.0.html), [explanation](http://choosealicense.com/licenses/agpl-3.0/).
+This is not to say that Web Starter Kit cannot be used in browsers older than those reflected, but merely that our focus will be on ensuring our layouts work great in the above.
 
+## Web Starter Kit and [Bootstrap](http://getbootstrap.com) or other CSS libraries?
 
+Web Starter Kit doesn't aim to compete with CSS libraries like Bootstrap, Foundation and Pure. These libraries provide an excellent solution for prototyping your initial project. The biggest challenge they present is it’s almost too easy to get stuck using their look and feel for the lifetime of your site. We think this leads to a poorer experience on the multi-screen web.
 
-## Known bugs ##
-1. In the initilization the calendars are unhydrated, why ember-data don't populate the relationships? [Bug: Sideloading relations (hasMany) on models not working!](https://github.com/emberjs/data/issues/1834) [hasMany tests](https://github.com/emberjs/data/blob/master/packages/ember-data/tests/integration/relationships/has_many_test.js) [store api](http://emberjs.com/api/data/classes/DS.Store.html)
-2. Add new vcomponents doesn't trigger UI updates.
-3. Instead of using mixings for vcomponents, use polymorphism.
+Web Starter Kit provides boilerplate styles & a visual style guide for projects, but encourages customising these to fit your own site. This may need a little more work, but the reality is that any serious project is going to have its own look and feel. We want you to feel comfortable changing the kit to suit your own needs.
 
+If you wish to use Bootstrap or other CSS libraries in your Web Starter Kit project, you have the flexibility to do so.
 
-## In the short-term roadmap ##
-1. Calendar
-  1. Filters click
-  2. Puntuation logic
-    1. WindRose (Radar Chart [demo1](http://graves.cl/radar-chart-d3/) [demo2](https://github.com/alangrafu/radar-chart-d3/blob/master/src/radar-chart.js) [demo3](http://www.larsko.org/v/euc/) [demo4](http://bl.ocks.org/nbremer/raw/6506614/))
-    2. History (Line + Bar Chart)
-  3. Without id, return all calendars in one.
-  4. Diary
-    1. wysiwyg
-    2. Attach photos & files.
-  5. Confirmer
-    1. [Draggable only horitzontal](http://stackoverflow.com/questions/8933513/html5-drag-drop-on-x-axis-and-without-fade), better ux for desktop.
-    2. 100% height
-  6. Challenger, suggest new ToDos answering questions.
-2. CRUD vcomponent
-  1. Recurrence + Alarms
-  2. Attach photos & files
-  3. Tags
-3. CalDav Sync
-4. [Migrate ember-app-kit to ember-cli](https://github.com/stefanpenner/ember-app-kit#migrating-to-ember-cli), npm install -g ember-cli && ember init, in branch [master-broccoli](https://github.com/RedRudeBoy/HowMany/tree/master-broccoli).
+## Troubleshooting
 
+If you find yourself running into issues during installation or running the tools, please check our [Troubleshooting](https://github.com/google/web-starter-kit/wiki/Troubleshooting) guide and then open an [issue](https://github.com/google/web-starter-kit/issues). We would be happy to discuss how they can be solved.
 
-## In the mid-term roadmap ##
-Data modeling
+## A Boilerplate-only Option
 
-1. [orbitjs/orbit.js](https://github.com/orbitjs/orbit.js) - Standalone library for coordinating access to data sources and keeping their contents synchronized.
-  1. [orbitjs/ember-orbit](https://github.com/orbitjs/ember-orbit) - Ember.js data layer built with Orbit.js
-  2. [dgeb/ember-orbit-example](https://github.com/dgeb/ember-orbit-example) - Example App that uses Orbit.js and Ember.js
-  3. [dgeb/orbit-ember-data-adapter.js](https://gist.github.com/dgeb/8446998) - A very simple example Orbit adapter implementation for Ember Data
-2. [limeapps/ember-share](https://github.com/limeapps/ember-share) - Ember persistence and collaboration. [Real-time demo](http://embershare.com/).
-3. CalDav Parsers
-  1. [gaye/dav](https://github.com/gaye/dav) - caldav and carddav client for nodejs and the browser.
-  2. [mozilla-b2g/caldav](https://github.com/mozilla-b2g/caldav) - Calendar Protocols.
-  3. [sandro-pasquali/jquery.dav](https://github.com/sandro-pasquali/jquery.dav) - JQuery plugin providing WebDAV access methods
-  4. CalDav Parsers Discarted: [jqCalDAV](https://gitorious.org/jqcaldav), [CalDavZAP](http://www.inf-it.com/open-source/clients/caldavzap/), [agenDAV](http://agendav.org/), [webical](https://code.google.com/p/webical/), [arshaw/fullcalendar](https://github.com/arshaw/fullcalendar)
-5. [Google APIs](https://developers.google.com/google-apps/app-apis) - For realtime sync if no CalDav lib if found
-  1. [Google APIs Client Library for JavaScript](https://developers.google.com/api-client-library/javascript/) - JavaScript client-application [Example](https://developers.google.com/api-client-library/javascript/start/start-js)
-  2. [Google Calendar API](https://developers.google.com/google-apps/calendar/)
-  3. [Google Tasks API](https://developers.google.com/google-apps/tasks/)
-  4. [Google Drive SDK](https://developers.google.com/drive/quickstart-js)
-  5. [Google Picker](https://developers.google.com/picker/docs) - Google Picker is a "File Open" dialog for the information stored in Google servers
+If you would prefer not to use any of our tooling, delete the following files from the project: `package.json`, `gulpfile.js`, `.jshintrc` and `.travis.yml`. You can now safely use the boilerplate with an alternative build-system or no build-system at all if you choose.
 
-Front-end helpers & libs
+## Extras
 
-1. [billysbilling/ember-animated-outlet](https://github.com/billysbilling/ember-animated-outlet) - Animated transitions.
-2. [emberjs/list-view](https://github.com/emberjs/list-view) - An efficient incremental rendering list view for large lists.
-  1. [∞.js](http://airbnb.github.io/infinity/) - Speeds up scrolling through long lists and keeps your infinite feeds smooth and stable for your users
-  2. [iScroll](http://cubiq.org/) - Smooth scrolling for the web
-3. [fuelUX](http://exacttarget.github.io/fuelux) - Additional lightweight JavaScript controls
-4. [Messenger](http://github.hubspot.com/messenger/) - Alerts for the 21st century
-5. [todc/todc-bootstrap](https://github.com/todc/todc-bootstrap) - Google-styled theme for Twitter Bootstrap
-6. [Bootstrap Arrows](http://bootstrap-arrows.iarfhlaith.com/) - Include arrows at any angle
-7. [pfefferle/openwebicons](https://github.com/pfefferle/openwebicons) - Set of icons to show the support for the Open Web
-8. [easelinc/tourist](https://github.com/easelinc/tourist) - Simple, flexible tours for your app [http://easelinc.github.io/tourist/](http://easelinc.github.io/tourist/)
+Optional additions, such as web server configurations, can be found at [WSK Extras
+repository](https://github.com/google/web-starter-kit-extras).
 
+## Inspiration
 
-## In the long-term roadmap ##
-1. This app requires a lot of information of the user, in a perfect world, all this data must be private & personal. [It's necessary to build a backend with webfinger](https://github.com/RedRudeBoy/HowManyBackendNodeDeprecated) for create independent nodes [("pods")](http://podupti.me/) like [diaspora](https://diasporafoundation.org/about).
+Web Starter Kit is inspired by [Mobile HTML5 Boilerplate](http://html5boilerplate.com/mobile/) and Yeoman's [generator-gulp-webapp](https://github.com/yeoman/generator-gulp-webapp), having taken input from contributors to both projects during development. Our [FAQs](https://github.com/google/web-starter-kit/wiki/FAQ) attempt to answer commonly asked questions about the project.
+
+## Contributing
+
+Contributions, questions and comments are all welcome and encouraged. For code contributions to Web Starter Kit, please see our [Contribution guide](CONTRIBUTING.md) before submitting a pull request. [Website](https://developers.google.com/web/starter-kit/) related issues should be filed on the [Web Fundamentals](https://github.com/google/WebFundamentals/issues/new) issue tracker.
+
+## License
+
+Apache 2.0  
+Copyright 2014 Google Inc
