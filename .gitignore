@@ -82,3 +82,5 @@ pids
 # Tmp
 .tmp/
 
+dist
+app.yaml
