@@ -38,7 +38,8 @@ const reload = browserSync.reload;
 
 // Lint JavaScript
 gulp.task('jshint', () =>
-  gulp.src('app/scripts/**/*.js')
+//  gulp.src('app/scripts/**/*.js')
+  gulp.src('app/scripts/main.js')
     .pipe(reload({stream: true, once: true}))
     .pipe($.jshint())
     .pipe($.jshint.reporter('jshint-stylish'))
@@ -91,8 +92,9 @@ gulp.task('styles', () => {
 
   // For best performance, don't add Sass partials to `gulp.src`
   return gulp.src([
-    'app/styles/**/*.scss',
-    'app/styles/**/*.css'
+//    'app/styles/**/*.scss',
+//    'app/styles/**/*.css'
+	'app/styles/main.scss'
   ])
     .pipe($.changed('.tmp/styles', {extension: '.css'}))
     .pipe($.sourcemaps.init())
@@ -175,8 +177,10 @@ gulp.task('serve', ['styles'], () => {
   });
 
   gulp.watch(['app/**/*.html'], reload);
-  gulp.watch(['app/styles/**/*.{scss,css}'], ['styles', reload]);
-  gulp.watch(['app/scripts/**/*.js'], ['jshint']);
+//  gulp.watch(['app/styles/**/*.{scss,css}'], ['styles', reload]);
+  gulp.watch(['app/styles/main.scss'], ['styles', reload]);
+//  gulp.watch(['app/scripts/**/*.js'], ['jshint']);
+  gulp.watch(['app/scripts/main.js'], ['jshint']);
   gulp.watch(['app/images/**/*'], reload);
 });
 
