@@ -1,0 +1,27 @@
+@mixin icons-challenger{
+	ul{
+
+		li{
+			display: inline-block;
+			text-align: center;
+			margin-right: 5px;
+
+			i ,
+			a span{
+				color: $dark-color-theme01;
+			}
+			i{
+				font-size: 30px;
+			}
+			a span{
+				display: block;
+			}
+		}
+		li::before{
+			display: none;
+		}
+		li:last-child{
+			margin-right: 0px;
+		}
+	}
+}
